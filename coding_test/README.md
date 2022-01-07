@@ -1,4 +1,4 @@
 Study coding test
 =============
 - :file_folder: coding_test
-  - :file_folder: baekjoon
+  - :open_file_folder: baekjoon
