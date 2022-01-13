@@ -91,10 +91,13 @@ var app = http.createServer(function (request, response) {
     });
   } else if(pathname === '/create_process'){
     var body = '';
-    request.on('data', function(data){
+    request.on('data', function(data){ // post가 긴 경우 data로 쪼개서 날림 이를 해결하기 위해 더해 줌
         body = body + data;
+        // 데이터가 너무 긴 경우 접속을 끊어버림 (보안장치) 예제에서는 다루지 않음
+        // if (body.length > 1e6)
+        //   request.connection.destroy();
     });
-    request.on('end', function(){
+    request.on('end', function(){ // 데이터가 조각조각 들어오다가 더이상 데이터가 없을 때 = 전송이 끝남
         var post = qs.parse(body);
         var title = post.title;
         var description = post.description;
@@ -144,6 +147,10 @@ var app = http.createServer(function (request, response) {
         var id = post.id;
         var title = post.title;
         var description = post.description;
+        /*fs.writeFile(`data/${title}`, description, 'utf8', function(err){
+          response.writeHead(302, {Location: `/?id=${title}`});
+          response.end();
+        });*/
         fs.rename(`data/${id}`, `data/${title}`, function(error){
           fs.writeFile(`data/${title}`, description, 'utf8', function(err){
             response.writeHead(302, {Location: `/?id=${title}`});
