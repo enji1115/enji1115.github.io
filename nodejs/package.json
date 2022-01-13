@@ -1,0 +1,17 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "생활코딩 강의\r =============\r [WEB2 - Node.js - 생활코딩](https://opentutorials.org/course/3332)\r ![화이팅화이팅](https://i.ytimg.com/vi_webp/3RS_A87IAPA/maxresdefault.webp)",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sanitize-html": "^2.6.1"
+  }
+}
