@@ -1,8 +1,13 @@
+// [How to run pm2]
+// pm2 start main.js --watch --ignore-watch="data/*" --no-daemon
+// [How to quit pm2]
+// pm2 kill
+
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
 var qs = require('querystring');
-var template = require('./lib/template.js'); // 찢었다..
+var template = require('./lib/template.js');
 var path = require('path');
 var sanitizeHtml = require('sanitize-html');
 
