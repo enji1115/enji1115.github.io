@@ -2,15 +2,10 @@ import React, { Component } from 'react';
 
 class TOC extends Component {
   shouldComponentUpdate(newProps, newState) {
-    // shouldComponentUpdate를 사용하지 않고 그냥 render로 실행하면 업데이트, 다른페이지를 여는 경우 모두 다시 로드됨
     console.log('===>TOC shouldComponentUpdate', 
       newProps.data, 
       this.props.data);
-
-    // return false;
-    // 기본값이 true
-    // false로 하면 render함수가 호출되지 않음
-
+      
     if(this.props.data === newProps.data) {
       return false;
     }
