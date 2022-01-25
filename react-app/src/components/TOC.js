@@ -17,7 +17,7 @@ class TOC extends Component {
           data-id={data[i].id}
           onClick={function(e){
             e.preventDefault();
-            this.props.onChangePage(e.target.dataset.id-1);
+            this.props.onChangePage(e.target.dataset.id);
           }.bind(this)}>{data[i].title}</a>
       </li>);
       i = i + 1;

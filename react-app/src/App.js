@@ -13,7 +13,7 @@ class App extends Component {
     this.max_content_id = 3;
     this.state = {
       mode: 'welcome', // welcome | read | create | update | delete
-      selected_content_id: 2,
+      selected_content_id: 0,
       welcome: {title:'Welcome', desc:'Hello, React!!'},
       subject: {title: 'WEB', sub: 'world wide web!'},
       contents: [
@@ -25,8 +25,15 @@ class App extends Component {
   }
 
   getReadContent(){
-    var data = this.state.contents[this.state.selected_content_id];
-    return data;
+    var i = 0;
+    while(i < this.state.contents.length){
+      var data = this.state.contents[i];
+      if(data.id === this.state.selected_content_id) {
+        return data;
+        break;
+      }
+      i = i + 1;
+    }
   }
   
   getContent() {
@@ -53,14 +60,22 @@ class App extends Component {
         this.setState({
           contents: _contents,
           mode: 'read',
-          selected_content_id: (this.max_content_id - 1)
+          selected_content_id: this.max_content_id
         });
       }.bind(this)}></CreateContent>
-    } else  if(this.state.mode === 'update'){
+    } else if(this.state.mode === 'update'){
       var _content = this.getReadContent();
       _article = <UpdateContent data={_content} onSubmit={function(_id, _title, _desc){
         var _contents = Array.from(this.state.contents);
-        _contents[this.state.selected_content_id] = {id: _id, title: _title, desc: _desc};
+        // _contents[this.state.selected_content_id] = {id: _id, title: _title, desc: _desc};
+        var i = 0;
+        while(i < _contents.length){
+          if(_contents[i].id === _id) {
+            _contents[i] = {id:_id, title:_title, desc:_desc};
+            break;
+          }
+          i = i + 1;
+        }
         this.setState({
           contents: _contents,
           mode: 'read'
@@ -89,11 +104,19 @@ class App extends Component {
             });
           }.bind(this)}
         ></TOC>
-        <Control onChangeMode={function(_mode){
+        <Control data={this.state.mode} onChangeMode={function(_mode){
           if(_mode === 'delete'){
             if(window.confirm('really?')){
               var _contents = Array.from(this.state.contents);
-              _contents.splice(this.state.selected_content_id,1);
+              // _contents.splice(this.state.selected_content_id,1);
+              var i = 0;
+              while(i < _contents.length){
+                if(_contents[i].id === this.state.selected_content_id){
+                  _contents.splice(i,1);
+                  break;
+                }
+                i = i + 1;
+              }
               this.setState({
                 mode:'welcome',
                 contents: _contents
