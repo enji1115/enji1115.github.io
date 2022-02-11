@@ -9,6 +9,4 @@ Study coding test
 - :file_folder: nodejs ← '생활코딩'으로 공부
   - :file_folder: nodejs
   - :file_folder: syntax
-- :file_folder: portfolio ← 포트폴리오 작업
 - :file_folder: react-app ← '생활코딩'으로 공부
-- :file_folder: portfolio
