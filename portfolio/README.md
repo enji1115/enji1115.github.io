@@ -1,12 +1,9 @@
-# enji1115.github.io
-enji1115's github server
+# Renew portfolio page
+I want to make it pretty.
 
-Study coding test
+Source List
 =============
-- :file_folder: coding_test
-  - :file_folder: baekjoon
-- :file_folder: js-object_oriented_programming ← '생활코딩'으로 공부
-- :file_folder: nodejs ← '생활코딩'으로 공부
-  - :file_folder: nodejs
-  - :file_folder: syntax
-- :file_folder: react-app ← '생활코딩'으로 공부
+- :file_folder: portfolio
+  - :file_folder: css
+  - :file_folder: images
+  - :file_folder: js

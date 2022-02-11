@@ -1,4 +1,5 @@
-# Study Node.js
+# Study JavaScript Object Oriented Programming(OOP)
+It was a very useful class.
 
 생활코딩 강의
 =============

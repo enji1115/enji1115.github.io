@@ -1,3 +1,6 @@
+# Study React
+It was very interesting to learn, but so difficult to apply.
+
 생활코딩 강의
 =============
 [React - 생활코딩](https://opentutorials.org/module/4058)

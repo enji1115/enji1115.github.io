@@ -1,4 +1,5 @@
 # Study Node.js
+It was very interesting to learn, but so difficult to apply.
 
 생활코딩 강의
 =============
