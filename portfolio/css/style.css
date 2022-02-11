@@ -1,7 +1,7 @@
 ﻿@charset "utf-8";
 
-html, body {width:100%; position:relative;}
-.el_hid {display:block; width:1px; height:1px; position:absolute; left: -9999px; top: -9999px; color:transparent; overflow:hidden;}
+html, body {width:100%; position:relative; font-family: 'Source Code Pro', sans-serif;}
+.el_hid {display:block; width:1px; height:1px; position:absolute; left: -10px; top: -10px; color:transparent; overflow:hidden;}
 .img_base {display:block; width:100%; position:relative;}
 .img_cv {display:block; width:100%; position:absolute; left:0; top:0;}
 
@@ -9,4 +9,50 @@ html, body {width:100%; position:relative;}
 	.box.fixed {position:fixed;}
 	.box.ended {position:absolute; top:auto; bottom:0;}
 
-.wrap {width:100%; max-width:1200px; margin:0 auto;}
+.wrap {width:100%; position: relative; font-size: 18px;}
+
+.header {width: 90%; position: fixed; left: 50%; top: 1em; transform: translateX(-50%); z-index: 999;}
+	.logo {display:inline-block; position: relative; font-weight: 700; font-size: 3em;}
+		.logo_hid {display:inline-block; width: 0em; transition: width .3s;}
+			.logo:hover .logo_hid {width: 1em;}
+				.logo:hover .logo_hid:last-child {width: .5em;}
+			.logo_hid_op {font-size: 0.8em; opacity: 0; transition: opacity .3s;}
+				.logo:hover .logo_hid_op {opacity: 1; transition-delay: .3s;}
+	.gnb {position: absolute; right: 0; top: 0;}
+		.gnb_list_wrap {}
+			.gnb_list {font-weight: 500; font-size: 2em; letter-spacing: -0.025em; text-align: right;}
+				.gnb_list + .gnb_list {margin-top: 0.5em;}
+				.gnb_link {display: inline-block; position: relative; transition: color .3s;}
+					.gnb_link:hover {color: rgb(139, 0, 0);}
+					.gnb_link::before {content: ''; display: block; width: 0%; height: 0.4em; position: absolute; left: 0; bottom: 0; background: rgba(226, 184, 184, 0); transition: width .3s;}
+					.gnb_link:hover::before {width: 100%; background: rgba(226, 184, 184, 1);}
+					.gnb_link span {display: inline-block; position: relative;}
+
+.sc {width:100%; max-width:1600px; position: relative; margin:0 auto; min-height: 50vh;}
+
+.scIntro {}
+
+.scExperience {}
+
+.scEducation {}
+
+.scSkills {}
+
+.scPersonalInfo {}
+
+.footer {}
+
+/* mid screen */
+@media screen and (max-width: 1600px) {
+	.wrap {font-size: 0.8em;}
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {
+	.wrap {font-size: 0.6em;}
+}
+
+/* mobile */
+@media screen and (max-width: 400px) {
+	.wrap {font-size: 0.5em;}
+}
