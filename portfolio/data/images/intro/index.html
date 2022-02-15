@@ -1,0 +1,79 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,
+		minimum-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<title>[scroll] Enlarge the image to make it look three-dimensional</title>
+	<meta property="og:title" content="[scroll] Enlarge the image to make it look three-dimensional" />
+	<meta property="og:image" content="http://webhtml.newturn.co.kr/cej/testgroup/scroll/no17/images/meta.png" />
+	<meta property="og:url" content="http://webhtml.newturn.co.kr/cej/testgroup/scroll/no17/" />
+
+	<link rel="stylesheet" href="./css/reset.css" />
+	<link rel="stylesheet" href="./css/style.css?v=9" />
+
+	<script type="text/javascript" src="./js/libs.js"></script>
+	<script type="text/javascript" src="./js/lottie.min.js"></script>
+	<script type="text/javascript" src="./js/custom.js?v=6"></script>
+</head>
+<body>
+	<div class="music_box">
+		<div id="player"></div>
+		<script>
+			var tag = document.createElement('script');
+			tag.src = "https://www.youtube.com/iframe_api";
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+			var player;
+			function onYouTubeIframeAPIReady() {
+			player = new YT.Player('player', {
+				videoId: 'rdVJDd_VLDU',
+				playerVars: {
+					playlist: 'rdVJDd_VLDU',
+					rel: 0,
+					loop: 1,
+					playsinline: 1,
+				},
+				events: {
+					'onReady': onPlayerReady
+				}
+			});
+			}
+			function onPlayerReady(event) {
+				$('.btn_music').click(function () {
+					if ($(this).hasClass('musicOn')) {
+						$(this).removeClass('musicOn');
+						event.target.pauseVideo();
+					} else {
+						$(this).addClass('musicOn');
+						event.target.playVideo();
+					}
+				});
+			}
+		</script>
+	</div>
+
+	<div class="scroll_wrap">
+		<div class="frame scroll_bg"></div>
+		<div class="frame scroll_logo"></div>
+		<div class="frame building1"></div>
+		<div class="frame building2"></div>
+		<div class="frame building3"></div>
+	</div>
+	<div class="scroll_cv"></div>
+	<div class="scroll_box"></div>
+
+	<section class="sc sc1">
+		<div class="logo"></div>
+		<div class="con_wrap">
+			<p><a href="https://www.inflearn.com/course/자바스크립트-인터랙티브-웹" target="_blank" title="link opens in new window">Reference lecture page &gt;</a></p>
+			<p><a href="https://cdn.inflearn.com/public/files/courses/325641/51457a9c-998b-4dcb-97eb-c694d56aa09d/last2.gif" target="_blank" title="link opens in new window">Reference lecture page - image file &gt;</a></p>
+			<p><a href="https://www.pinterest.co.kr/pin/675680750334242092/" target="_blank" title="link opens in new window">Reference illustration &gt;</a></p>
+			<p class="hh">Cho Eun Ji</p>
+		</div>
+	</section>
+
+	<button type="button" class="btn_music aniOn"><div class="btn_music_ico" id="btn_music_ico"></div></button>
+</body>
+</html>
