@@ -22,12 +22,27 @@ html, body {width:100%; position:relative; font-family: 'Source Code Pro', sans-
 			.sc_inner::after {padding-top: 8%;}
 		.dark .sc_inner {color: #fff;}
 		.light .sc_inner {color: #000;}
-		.sc_list_wrap {}
-			.sc_list {}
-				.sc_tit {}
-				.sc_subtit {}
-				.sc_p {}
-				.sc_area {}
+		.sc_tit {font-weight: 700; font-size: 4em; letter-spacing: -0.01em; line-height: 1.7;}
+			* + .sc_tit {margin-top: 1em;}
+		.sc_list_wrap {line-height: 1.4;}
+			.sc_list {position: relative; padding: 1em 1.5em; box-sizing: border-box;}
+				.sc_list + .sc_list {margin-top: 2em;}
+					.sc_list + .sc_list::before {content: ''; display: block; width: 100%; position:absolute; left: 0; top: -1em; border-top: solid 1px;}
+				.sc_list_tit {position: relative; font-weight: 500; font-size: 2.5em; letter-spacing: -0.025em;}
+				.sc_list_subtit {position: relative; font-weight: 500; font-size: 2em; letter-spacing: -0.025em;}
+				.sc_list_p {position: relative; font-size: 1.5em; letter-spacing: -0.025em;}
+				.sc_list_area {position: relative; font-size: 1.25em; letter-spacing: -0.025em;}
+					* + .sc_list_area {margin-top: 0.5em;}
+				.btn_scList_more {display: block; width: 100%; position: relative; color: inherit; opacity: 0.8;}
+					.btn_scList_more::after {content: ''; display: block; width: 2em; height: 2em; position: absolute; right: 1em; top: 1em; transform: rotate(45deg); border-style: solid; border-width: 0 0.5em 0.5em 0; box-sizing: border-box;}
+					.sc_list.conOn .btn_scList_more::after {transform: rotate(225deg) translate(-25%,-25%);}
+					.btn_scList_more:hover, .sc_list.conOn .btn_scList_more {opacity: 1;}
+					.btn_scList_more .sc_list_tit {display: inline-block;}
+						.btn_scList_more .sc_list_tit span {display: inline-block; position: relative;}
+							.btn_scList_more .sc_list_tit::before {content: ''; display: block; width: 0%; height: 0.4em; position: absolute; left: 0%; bottom: 0.2em; background: rgba(220, 155, 135, 0);}
+								.btn_scList_more:hover .sc_list_tit::before, .sc_list.conOn .btn_scList_more .sc_list_tit::before {width: 100%; background: rgba(220, 155, 135, 0.5); transition: width .3s;}
+				.scList_more {height: 0; box-sizing: border-box; overflow: hidden;}
+					.sc_list.conOn .scList_more {height: auto; padding: 1em;}
 /* e: common */
 
 /* s: header */
@@ -41,12 +56,13 @@ html, body {width:100%; position:relative; font-family: 'Source Code Pro', sans-
 					.logo:hover .logo_hid_op {opacity: 1; transition-delay: .3s;}
 	.gnb {position: fixed; right: 5%; top: 4vh; z-index: 999; mix-blend-mode: difference; z-index: 999;}
 		.gnb_list_wrap {}
-			.gnb_list {font-weight: 500; font-size: 2em; letter-spacing: -0.025em; text-align: right;}
+			.gnb_list {font-size: 2em; letter-spacing: -0.025em; text-align: right;}
+				.gnb_list.on {font-weight: 500;}
 				.gnb_list + .gnb_list {margin-top: 0.5em;}
 				.gnb_link {display: inline-block; position: relative; color:rgba(255, 255, 255, 0.7); transition: color .3s;}
 					.gnb_link:hover, .gnb_list.on .gnb_link {color: rgba(255, 255, 255, 1);}
-					.gnb_link::before {content: ''; display: block; width: 0%; height: 0.4em; position: absolute; left: -0.75%; bottom: 0; background: rgba(220, 155, 135, 0); transition: width .3s;}
-						.gnb_link:hover::before, .gnb_list.on .gnb_link::before {width: 102%; background: rgba(220, 155, 135, 0.7);}
+					.gnb_link::before {content: ''; display: block; width: 0%; height: 0.4em; position: absolute; left: -0.75%; bottom: 0; background: rgba(220, 155, 135, 0);}
+						.gnb_link:hover::before, .gnb_list.on .gnb_link::before {width: 102%; background: rgba(220, 155, 135, 0.7); transition: width .3s;}
 						.gnb_link span {display: inline-block; position: relative;}
 					.gnb_link::after {content: ''; display: block; width: 0.16em; height: 0.16em; position: absolute; right: -0.35em; top: -0.08em; border: solid 0.16em; border-radius: 100%; box-sizing: border-box; opacity: 0; transition: opacity .1s;}
 						.gnb_list.on .gnb_link::after {opacity: 1; transition: opacity .3s; transition-delay: .2s;}
@@ -76,6 +92,10 @@ html, body {width:100%; position:relative; font-family: 'Source Code Pro', sans-
 
 /* s: scExperience */
 .scExperience {background-color: #151515;}
+	.scExperience .sc_list_p {display: inline-block;}
+		.scExperience .sc_list_p + .sc_list_p::before {content: ''; display: inline-block; width: 1em;}
+		.scExperience .sc_list_p + .sc_list_p::after {content: ''; display: block; width: 0; height: 1em; position: absolute; left: 0.3em; top: 50%; transform: translateY(-50%); border-right: solid 1px; opacity: 0.7;}
+		.sc_list.conOn.sc_list_211230 {background-color: rgba(34, 56, 135,0.5);}
 /* e: scExperience */
 
 /* s: scEducation */
@@ -106,6 +126,13 @@ html, body {width:100%; position:relative; font-family: 'Source Code Pro', sans-
 /* tablet */
 @media screen and (max-width: 768px) {
 	.wrap {font-size: 0.6em;}
+
+	/* s: common */
+	.btn_scList_more {}
+		.btn_scList_more:hover {opacity: 0;}
+		.sc_list.conOn .btn_scList_more {opacity: 1;}
+		.btn_scList_more .sc_list_tit::before {display: none;}
+	/* e: common */
 
 	/* s: header */
 	.logo_hid {}

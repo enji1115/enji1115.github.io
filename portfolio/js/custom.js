@@ -3,7 +3,15 @@
 	if ((navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) $('body').addClass('ie');
 }
 $(document).ready(function() {
+	// s: common
+	// detect IE Edge
 	detectIEEdge();
+
+	// btn_scList_more
+	$('.btn_scList_more').on('click', function(){
+		$(this).parent('.sc_list').toggleClass('conOn');
+	});
+	// e: common
 
 	// s: header
 	// Logo button - scroll Top
@@ -39,11 +47,13 @@ $(document).ready(function() {
 		// s: header
 		// gnb_list - detect content
 		gnbList_i = 0;
-		$('.gnb_list').removeClass('on');
 		while (gnbList_i < $('.sc').length) {
 			if (scroll >= $('.sc').eq(gnbList_i).offset().top - win_h*0.1
 				&& scroll < $('.sc').eq(gnbList_i).offset().top - win_h*0.1 + $('.sc').eq(gnbList_i).height()) {
-				if (gnbList_i !== 0) $('.gnb_list').eq(gnbList_i - 1).addClass('on');
+				if (gnbList_i !== 0) {
+					$('.gnb_list').removeClass('on');
+					$('.gnb_list').eq(gnbList_i - 1).addClass('on');
+				} else $('.gnb_list').removeClass('on');
 				break
 			}
 			else gnbList_i += 1;
