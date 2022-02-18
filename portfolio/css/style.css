@@ -5,6 +5,9 @@
 ::selection {background: rgb(255, 197, 200, 0.7); color: #562957;}
 
 html, body {width:100%; position:relative; font-family: 'Source Code Pro', sans-serif;}
+a, button {color: inherit;}
+small {display: inline-block; font-size: 0.75em;}
+strong {font-weight: 500;}
 .el_hid {display:block; width:1px; height:1px; position:absolute; left: -10px; top: -10px; color:transparent; overflow:hidden;}
 .img_base {display:block; width:100%; position:relative;}
 .img_cv {display:block; width:100%; position:absolute; left:0; top:0;}
@@ -31,10 +34,11 @@ html, body {width:100%; position:relative; font-family: 'Source Code Pro', sans-
 					.sc_list + .sc_list::before {content: ''; display: block; width: 100%; position:absolute; left: 0; top: -1.5em; border-top: solid 1px; opacity: 0.5;}
 				.sc_list_tit {position: relative; font-weight: 700; font-size: 2.5em; letter-spacing: -0.025em;}
 				.sc_list_subtit {position: relative; margin-top: 0.2em; font-weight: 500; font-size: 2em; letter-spacing: -0.025em;}
+					.sc_list_subtit strong {font-weight: 700;}
 				.sc_list_p {position: relative; margin-top: 0.5em; font-size: 1.5em; letter-spacing: -0.025em;}
 				.sc_list_area {position: relative; font-size: 1.4em; letter-spacing: -0.025em;}
 					* + .sc_list_area {margin-top: 1em;}
-				.btn_scList_more {display: block; width: 100%; position: relative; color: inherit; opacity: 0.8;}
+				.btn_scList_more {display: block; width: 100%; position: relative; opacity: 0.8;}
 					.btn_scList_more::after {content: ''; display: block; width: 2em; height: 2em; position: absolute; right: 1em; top: 0.5em; transform: rotate(45deg); border-style: solid; border-width: 0 0.5em 0.5em 0; box-sizing: border-box;}
 					.sc_list.conOn .btn_scList_more::after {transform: rotate(225deg) translate(-25%,-25%);}
 					.btn_scList_more:hover, .sc_list.conOn .btn_scList_more {opacity: 1;}
@@ -106,7 +110,7 @@ html, body {width:100%; position:relative; font-family: 'Source Code Pro', sans-
 /* e: scExperience */
 
 /* s: scEducation */
-.scEducation {background-color: #c1c1c1;}
+.scEducation {background-color: #ffe3c2;}
 	.scEducation .sc_list_p {display: inline-block;}
 		.scEducation .sc_list_p + .sc_list_p::before {content: ''; display: inline-block; width: 1em;}
 		.scEducation .sc_list_p + .sc_list_p::after {content: ''; display: block; width: 0; height: 1em; position: absolute; left: 0.3em; top: 50%; transform: translateY(-50%); border-right: solid 1px; opacity: 0.5;}
@@ -118,11 +122,30 @@ html, body {width:100%; position:relative; font-family: 'Source Code Pro', sans-
 
 /* s: scPersonalInfo */
 .scPersonalInfo {background-color: #f1f1f1;}
+	.pi_tit {font-weight: 700;}
+		.pi_tit::before {content: ''; display: inline-block; width: 1em; height: 1em; position:relative; margin-top: 0.2em; margin-right: 0.4em; vertical-align: top; background-image: url('../data/images/common/info_icon.svg?v=0'); background-repeat: no-repeat; background-size: auto 200%;}
+		.pi_tit.email::before {background-position: 0% 0%;}
+		.pi_tit.telephone::before {background-position: 25% 0%;}
+		.pi_tit.location::before {background-position: 50% 0%;}
+		.pi_tit.homepage::before {background-position: 75% 0%;}
+		.pi_tit.github::before {background-position: 100% 0%;}
+		.pi_tit.workinghours::before {background-position: 0% 100%;}
+		.pi_tit.awards::before {background-position: 75% 100%;}
+	.pi_link, .pi_awd_link .sc_list_p {display: inline-block; position: relative;}
+		.pi_link::before, .pi_awd_link .sc_list_p::before {content: ''; display: block; width: 0%; height: 0.4em; position: absolute; left: 0%; bottom: 0.2em; background: rgba(87, 132, 146, 0);}
+			.pi_link:hover::before, .pi_awd_link:hover .sc_list_p::before {width: 100%; background: rgba(87, 132, 146, 0.5); transition: width .3s;}
+	.pi_tit.awards + .sc_list_wrap {margin-top: 0; font-size: 0.5em;}
+		.pi_awd_link .sc_list_p {font-size: 1.8em;}
 /* e: scPersonalInfo */
 
 /* s: footer */
 .footer {width: 100%; position: relative; background-color: #333;}
 	.footer_inner {max-width:1600px; margin:0 auto; padding: 4em 5% 6em; box-sizing: border-box; font-size: 1em; color: #fff;}
+		.footer_p {font-size: 1.1em; opacity: 0.9;}
+			.footer_p a {opacity: 0.8;}
+				.footer_p a:hover {opacity: 1;}
+			.footer_p + .footer_p {margin-top: 0.5em;}
+			.footer_p:last-child {margin-top: 1.5em; font-size: 1.4em; opacity: 1;}
 /* e: footer */
 
 /* ie */
