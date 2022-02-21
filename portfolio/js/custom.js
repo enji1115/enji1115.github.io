@@ -27,6 +27,50 @@ $(document).ready(function() {
 	});
 	// e: header
 
+	// s: scExperience
+	// project listup
+	function expPrjListUp (cat) {
+		$('.expPrj_list_wrap').html('');
+		for(var i = 0; i < ary_expPrj.length; i++){
+			var tgt_data = ary_expPrj[i];
+			var tgt_cat = tgt_data.category;
+			if (cat == 'LATEST' || tgt_cat.indexOf(cat) > -1) {
+				$('.expPrj_list_wrap').append(`
+					<li class="sc_list expPrj_list expPrj_list_${tgt_data.num}">
+						<button type="button" class="btn_scList_more btn_expPrj">
+							<h3 class="sc_list_tit expPrj_tit"><span>${tgt_data.title}</span></h3>
+							<h4 class="sc_list_subtit expPrj_subtit">${tgt_data.subtitle}</h4>
+							<p class="sc_list_p expPrj_date">${tgt_data.date}</p>
+							<p class="sc_list_p expPrj_client">${tgt_data.client}</p>
+							<p class="sc_list_p expPrj_cat">${tgt_data.category}</p>
+						</button>
+						<div class="scList_more">
+							<p class="sc_list_area expPrj_info">
+							${tgt_data.info}
+							</p>
+						</div>
+						<style>.expPrj_list_${tgt_data.num}.conOn {background-color: ${tgt_data.background};}</style>
+					</li>
+				`);
+			}
+		}
+	}
+	expPrjListUp('LATEST');
+	// project category slider
+	var swiper_expPrjCat_list = new Swiper(".expPrjCat_list_wrap", {
+	  slidesPerView: 'auto',
+	  spaceBetween: 16,
+	  freeMode: true,
+	  on: {
+		progress: function(data)  {
+		  $('.expPrjCat_list_wrap').removeClass('onBeg onEnd');
+		  if (data <= 0) $('.expPrjCat_list_wrap').addClass('onBeg');
+		  if (data >= 1) $('.expPrjCat_list_wrap').addClass('onEnd');
+		}
+	  }
+	});
+	// e: scExperience
+
 	// s: scroll function
 	var scroll = $(window).scrollTop(), win_h = $(window).height();
 	// s: header

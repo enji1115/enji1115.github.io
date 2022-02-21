@@ -103,6 +103,16 @@ strong {font-weight: 500;}
 
 /* s: scExperience */
 .scExperience {background-color: #151515;}
+	.expPrjCat_list_wrap {width: 100%; position: relative; margin-top: 1em; overflow: hidden;}
+		.expPrjCat_list_wrap::before, .expPrjCat_list_wrap::after {content: ''; display: block; width: 5em; height: 120%; position: absolute; top: -10%; pointer-events: none; z-index: 2; opacity: 1; transition: opacity .3s;}
+			.expPrjCat_list_wrap::before {left: -1px; background: linear-gradient(90deg, #000, transparent);}
+			.expPrjCat_list_wrap::after {right: -1px; background: linear-gradient(-90deg, #000, transparent);}
+			.expPrjCat_list_wrap.onBeg::before, .expPrjCat_list_wrap.onEnd::after {opacity: 0;}
+		.expPrjCat_list_inner {width: 100%; position: relative; padding: 1px 0;}
+			.expPrjCat_list {display: inline-block; width: auto;}
+				.expPrjCat_list.bin {width: 5em;}
+				.btn_expPrjCat {display: inline-block; padding: 0.5em 1em; box-sizing: border-box; border-radius: 2em; border: solid 1px; font-size: 1.6em; opacity: 0.8; transition: opacity .3s;}
+					.btn_expPrjCat:hover, .btn_expPrjCat.on {opacity: 1;}
 	.scExperience .sc_list_p {display: inline-block;}
 		.scExperience .sc_list_p + .sc_list_p::before {content: ''; display: inline-block; width: 1em;}
 		.scExperience .sc_list_p + .sc_list_p::after {content: ''; display: block; width: 0; height: 1em; position: absolute; left: 0.3em; top: 50%; transform: translateY(-50%); border-right: solid 1px; opacity: 0.5;}
@@ -181,6 +191,13 @@ strong {font-weight: 500;}
 
 	/* s: scIntro */
 	.scroll_logo {background-size: auto 90%;}
+	/* e: scIntro */
+
+	/* s: scExperience */
+	.btn_expPrjCat {font-size: 2em;}
+		.btn_expPrjCat:hover {opacity: 0.8;}
+		.btn_expPrjCat.on {opacity: 1;}
+	/* e: scExperience */
 }
 
 /* mobile */
