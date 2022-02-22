@@ -4,13 +4,17 @@
 ::-moz-selection {background: rgb(255, 197, 200, 0.7); color: #562957;}
 ::selection {background: rgb(255, 197, 200, 0.7); color: #562957;}
 
-html, body {width:100%; position:relative; font-family: 'Source Code Pro', sans-serif;}
+html, body {width:100%; position:relative; font-family: 'Source Code Pro', 'Nanum Gothic Coding', sans-serif;}
 a, button {color: inherit;}
 small {display: inline-block; font-size: 0.75em;}
 strong {font-weight: 500;}
 .el_hid {display:block; width:1px; height:1px; position:absolute; left: -10px; top: -10px; color:transparent; overflow:hidden;}
 .img_base {display:block; width:100%; position:relative;}
 .img_cv {display:block; width:100%; position:absolute; left:0; top:0;}
+.inb {display: inline-block;}
+
+.scr, .scr_rp {position: relative; transform: translateY(8em); opacity: 0; transition: transform 1s, opacity 1s;}
+	.scr.on, .scr_rp.on {transform: translateY(0em); opacity: 1;}
 
 .box {position:relative; left:0; top:0;}
 	.box.fixed {position:fixed;}
@@ -33,9 +37,11 @@ strong {font-weight: 500;}
 				.sc_list + .sc_list {margin-top: 3em;}
 					.sc_list + .sc_list::before {content: ''; display: block; width: 100%; position:absolute; left: 0; top: -1.5em; border-top: solid 1px; opacity: 0.5;}
 				.sc_list_tit {position: relative; font-weight: 700; font-size: 2.5em; letter-spacing: -0.025em;}
-				.sc_list_subtit {position: relative; margin-top: 0.2em; font-weight: 500; font-size: 2em; letter-spacing: -0.025em;}
+				.sc_list_subtit {position: relative; font-weight: 500; font-size: 2em; letter-spacing: -0.025em;}
+					* + .sc_list_subtit {margin-top: 0.2em;}
 					.sc_list_subtit strong {font-weight: 700;}
-				.sc_list_p {position: relative; margin-top: 0.5em; font-size: 1.5em; letter-spacing: -0.025em;}
+				.sc_list_p {position: relative; font-size: 1.5em; letter-spacing: -0.025em;}
+					* + .sc_list_p {margin-top: 0.5em;}
 				.sc_list_area {position: relative; font-size: 1.4em; letter-spacing: -0.025em;}
 					* + .sc_list_area {margin-top: 1em;}
 				.btn_scList_more {display: block; width: 100%; position: relative; opacity: 0.8;}
@@ -77,6 +83,12 @@ strong {font-weight: 500;}
 				.lang_list + .lang_list::before {content: ''; display: block; width: 0; height: 1em; position:absolute; left: -0.5em; top: 50%; transform: translateY(-50%); border-left: solid 1px rgba(255, 255, 255, 0.5);}
 				.lang_link {font-size: 1.5em; color: rgba(255, 255, 255, 0.7);}
 					.lang_link.on {font-weight: 500; color: rgba(255, 255, 255, 1);}
+	.btn_top {display: block; width: 5em; height: 5em; position: fixed; right: 3%; bottom: 2.5em; border-radius: 100%;
+		overflow: hidden; color: #000; z-index: 999; mix-blend-mode: difference; z-index: 999; transform: translateX(3em); opacity: 0; transition: transform .5s, opacity .5s;}
+		.wrap.onTop .btn_top {transform: translateX(0em); opacity: 0.8;}
+			.wrap.onTop .btn_top:hover {opacity: 1;}
+		.btn_top::before {content: ''; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: #fff;}
+		.btn_top::after {content: ''; display: block; width: 1.5em; height: 1.5em; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -25%) rotate(45deg); border-style: solid; border-width: 0.4em 0 0 0.4em; box-sizing: border-box;}
 /* e: header */
 
 /* s: scIntro */
@@ -111,8 +123,9 @@ strong {font-weight: 500;}
 		.expPrjCat_list_inner {width: 100%; position: relative; padding: 1px 0;}
 			.expPrjCat_list {display: inline-block; width: auto;}
 				.expPrjCat_list.bin {width: 5em;}
-				.btn_expPrjCat {display: inline-block; padding: 0.5em 1em; box-sizing: border-box; border-radius: 2em; border: solid 1px; font-size: 1.6em; opacity: 0.8; transition: opacity .3s;}
+				.btn_expPrjCat {display: inline-block; padding: 0.5em 1em; box-sizing: border-box; border-radius: 2em; border: solid 1px #fff; font-size: 1.6em; letter-spacing: -0.02em; opacity: 0.8; transition: opacity .3s;}
 					.btn_expPrjCat:hover, .btn_expPrjCat.on {opacity: 1;}
+					.btn_expPrjCat.on {font-weight: 500; color: #000; background-color: rgba(255, 255, 255, 0.8);}
 	.scExperience .sc_list_p {display: inline-block;}
 		.scExperience .sc_list_p + .sc_list_p::before {content: ''; display: inline-block; width: 1em;}
 		.scExperience .sc_list_p + .sc_list_p::after {content: ''; display: block; width: 0; height: 1em; position: absolute; left: 0.3em; top: 50%; transform: translateY(-50%); border-right: solid 1px; opacity: 0.5;}
@@ -141,6 +154,7 @@ strong {font-weight: 500;}
 		.pi_tit.github::before {background-position: 100% 0%;}
 		.pi_tit.workinghours::before {background-position: 0% 100%;}
 		.pi_tit.awards::before {background-position: 75% 100%;}
+		.pi_tit.certificates::before {background-position: 100% 100%;}
 	.pi_link, .pi_awd_link .sc_list_p {display: inline-block; position: relative;}
 		.pi_link::before, .pi_awd_link .sc_list_p::before {content: ''; display: block; width: 0%; height: 0.4em; position: absolute; left: 0%; bottom: 0.2em; background: rgba(87, 132, 146, 0);}
 			.pi_link:hover::before, .pi_awd_link:hover .sc_list_p::before {width: 100%; background: rgba(87, 132, 146, 0.5); transition: width .3s;}
@@ -171,10 +185,11 @@ strong {font-weight: 500;}
 	.wrap {font-size: 0.6em;}
 
 	/* s: common */
-	.btn_scList_more {}
-		.btn_scList_more:hover {opacity: 0.8;}
-		.sc_list.conOn .btn_scList_more {opacity: 1;}
-		.btn_scList_more .sc_list_tit::before {display: none;}
+	.sc_list {padding: 1em;}
+		.btn_scList_more {}
+			.btn_scList_more:hover {opacity: 0.8;}
+			.sc_list.conOn .btn_scList_more {opacity: 1;}
+			.btn_scList_more .sc_list_tit::before {display: none;}
 	/* e: common */
 
 	/* s: header */
@@ -187,6 +202,7 @@ strong {font-weight: 500;}
 		.gnb_link::before {}
 			.gnb_link:hover::before {width: 0%; background: rgba(220, 155, 135, 0);}
 			.gnb_list.on .gnb_link::before {width: 102%; background: rgba(220, 155, 135, 0.7);}
+	.wrap.onTop .btn_top:hover {opacity: 0.8;}
 	/* e: header */
 
 	/* s: scIntro */
@@ -194,7 +210,7 @@ strong {font-weight: 500;}
 	/* e: scIntro */
 
 	/* s: scExperience */
-	.btn_expPrjCat {font-size: 2em;}
+	.btn_expPrjCat {font-size: 1.8em;}
 		.btn_expPrjCat:hover {opacity: 0.8;}
 		.btn_expPrjCat.on {opacity: 1;}
 	/* e: scExperience */

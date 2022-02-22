@@ -7,6 +7,17 @@ $(document).ready(function() {
 	// detect IE Edge
 	detectIEEdge();
 
+	// scroll checker - use
+	$('.scr').viewportChecker({
+		classToAdd: 'on',
+		offset:0
+	});
+	$('.scr_rp').viewportChecker({
+		classToAdd: 'on',
+		offset:0,
+		repeat:true
+	});
+
 	// btn_scList_more
 	$('.btn_scList_more').on('click', function(){
 		$(this).parent('.sc_list').toggleClass('conOn');
@@ -14,8 +25,8 @@ $(document).ready(function() {
 	// e: common
 
 	// s: header
-	// Logo button - scroll Top
-	$('.btn_logo').on('click', function(){
+	// Logo and Top button - scroll Top
+	$('.btn_logo, .btn_top').on('click', function(){
 		$('html, body').stop(true, false).animate({scrollTop: '0'}, 700);
 	});
 	// gnb link - scroll move content
@@ -31,18 +42,19 @@ $(document).ready(function() {
 	// project listup
 	function expPrjListUp (cat) {
 		$('.expPrj_list_wrap').html('');
+		var expPrj_list = '';
 		for(var i = 0; i < ary_expPrj.length; i++){
 			var tgt_data = ary_expPrj[i];
 			var tgt_cat = tgt_data.category;
 			if (cat == 'LATEST' || tgt_cat.indexOf(cat) > -1) {
-				$('.expPrj_list_wrap').append(`
+				expPrj_list += `
 					<li class="sc_list expPrj_list expPrj_list_${tgt_data.num}">
 						<button type="button" class="btn_scList_more btn_expPrj">
-							<h3 class="sc_list_tit expPrj_tit"><span>${tgt_data.title}</span></h3>
-							<h4 class="sc_list_subtit expPrj_subtit">${tgt_data.subtitle}</h4>
+							<h4 class="sc_list_tit expPrj_tit"><span>${tgt_data.title}</span></h4>
+							<h3 class="sc_list_subtit expPrj_subtit">${tgt_data.subtitle}</h3>
 							<p class="sc_list_p expPrj_date">${tgt_data.date}</p>
 							<p class="sc_list_p expPrj_client">${tgt_data.client}</p>
-							<p class="sc_list_p expPrj_cat">${tgt_data.category}</p>
+							<p class="sc_list_p expPrj_cat notranslate">${tgt_data.category}</p>
 						</button>
 						<div class="scList_more">
 							<p class="sc_list_area expPrj_info">
@@ -51,15 +63,27 @@ $(document).ready(function() {
 						</div>
 						<style>.expPrj_list_${tgt_data.num}.conOn {background-color: ${tgt_data.background};}</style>
 					</li>
-				`);
+				`;
 			}
 		}
+		if (expPrj_list == '') {
+				expPrj_list += `
+				<li class="sc_list expPrj_list">
+					<p class="sc_list_p">The project doesn't exist yet.</p>
+				</li>
+			`;
+		}
+		$('.expPrj_list_wrap').append(expPrj_list);
 	}
 	expPrjListUp('LATEST');
+	// project's btn_scList_more
+	$('.expPrj_list_wrap').on('click', '.btn_expPrj', function(){
+		$(this).parent('.sc_list').toggleClass('conOn');
+	});
 	// project category slider
 	var swiper_expPrjCat_list = new Swiper(".expPrjCat_list_wrap", {
 	  slidesPerView: 'auto',
-	  spaceBetween: 16,
+	  spaceBetween: 14,
 	  freeMode: true,
 	  on: {
 		progress: function(data)  {
@@ -68,6 +92,13 @@ $(document).ready(function() {
 		  if (data >= 1) $('.expPrjCat_list_wrap').addClass('onEnd');
 		}
 	  }
+	});
+	// project category
+	$('.btn_expPrjCat').on('click', function(){
+		$('.btn_expPrjCat').removeClass('on');
+		$(this).addClass('on');
+		expPrjListUp($(this).data('cat'));
+		$('html, body').stop(true, false).animate({scrollTop: $('#Experience_Projects').offset().top - $('.logo').height() - 10}, 700);
 	});
 	// e: scExperience
 
@@ -89,6 +120,9 @@ $(document).ready(function() {
 		win_h = $(window).height();
 
 		// s: header
+		// wrap - detect top
+		if (scroll > $('.logo').height()) $('.wrap').addClass('onTop');
+		else $('.wrap').removeClass('onTop');
 		// gnb_list - detect content
 		gnbList_i = 0;
 		while (gnbList_i < $('.sc').length) {
