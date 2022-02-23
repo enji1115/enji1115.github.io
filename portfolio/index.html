@@ -62,9 +62,9 @@
 	<div class="wrap">
 		<header class="header notranslate">
 			<h1 class="logo">
-				<button class="btn_logo">
+				<a href="./" class="btn_logo">
 					C<span class="logo_hid"><span class="logo_hid_op">ho </span></span>E<span class="logo_hid"><span class="logo_hid_op">un </span></span>J<span class="logo_hid"><span class="logo_hid_op">i</span></span>
-				</button>
+				</a>
 			</h1>
 			<nav class="gnb">
 				<ul class="gnb_list_wrap">
@@ -77,6 +77,14 @@
 					<li class="lang_list"><a href="###" class="lang_link">KOR</a></li><li class="lang_list"><a href="###" class="lang_link on">ENG</a></li>
 				</ul>
 			</nav>
+			<button type="button" class="btn_ham">
+				<span class="el_hid">Button that opens the menu</span>
+				<span class="btn_ham_bar_wrap">
+					<span class="btn_ham_bar top"></span>
+					<span class="btn_ham_bar mid"></span>
+					<span class="btn_ham_bar btm"></span>
+				</span>
+			</button>
 			<button type="button" class="btn_top"><span class="el_hid">Go to page top</span></button>
 		</header>
 
@@ -94,7 +102,7 @@
 
 		<section class="sc scExperience dark" id="Experience">
 			<div class="sc_inner">
-				<h2 class="sc_tit" id="Experience_WorkHistory">Work History</h2>
+				<h2 class="sc_tit scr" id="Experience_WorkHistory">Work History</h2>
 				<ul class="sc_list_wrap">
 					<li class="sc_list scr">
 						<h3 class="sc_list_tit">Web Publisher</h3>
@@ -106,8 +114,11 @@
 						</p>
 					</li>
 				</ul>
-				<h2 class="sc_tit" id="Experience_Projects">Projects</h2>
-				<div class="swiper expPrjCat_list_wrap onBeg notranslate">
+				<h2 class="sc_tit scr" id="Experience_Projects">Projects</h2>
+				<p class="sc_disc scr">
+					<sup>*</sup>If it is impossible to mention for security reasons, I have marked it as 'Security'.
+				</p>
+				<div class="swiper expPrjCat_list_wrap onBeg notranslate scr">
 					<ul class="swiper-wrapper expPrjCat_list_inner">
 						<li class="swiper-slide expPrjCat_list">
 							<button type="button" class="btn_expPrjCat on" data-cat="LATEST">LATEST</button>
@@ -134,7 +145,7 @@
 
 		<section class="sc scEducation light" id="Education">
 			<div class="sc_inner">
-				<h2 class="sc_tit">Education</h2>
+				<h2 class="sc_tit scr">Education</h2>
 				<ul class="sc_list_wrap">
 					<li class="sc_list scr">
 						<h3 class="sc_list_tit">Web content expert training course</h3>
@@ -165,7 +176,7 @@
 
 		<section class="sc scSkills dark" id="Skills">
 			<div class="sc_inner">
-				<h2 class="sc_tit">Areas of Expertise</h2>
+				<h2 class="sc_tit scr">Areas of Expertise</h2>
 				<ul class="sc_list_wrap">
 					<li class="sc_list scr">
 						<h3 class="sc_list_tit">Web publishing</h3>
@@ -175,7 +186,7 @@
 						</p>
 					</li>
 				</ul>
-				<h2 class="sc_tit">Skills</h2>
+				<h2 class="sc_tit scr">Skills</h2>
 				<ul class="sc_list_wrap">
 					<li class="sc_list scr">
 						<h3 class="sc_list_tit">High level</h3>
@@ -206,7 +217,7 @@
 						</p>
 					</li>
 				</ul>
-				<h2 class="sc_tit">Environment</h2>
+				<h2 class="sc_tit scr">Environments</h2>
 				<ul class="sc_list_wrap">
 					<li class="sc_list scr">
 						<h3 class="sc_list_tit">Team Collaboration and Development Tools</h3>
@@ -243,50 +254,52 @@
 
 		<section class="sc scPersonalInfo light" id="PersonalInfo">
 			<div class="sc_inner">
-				<h2 class="sc_tit">Personal Info</h2>
+				<h2 class="sc_tit scr">Personal Info</h2>
 				<ul class="sc_list_wrap">
-					<li class="sc_list scr">
-						<p class="sc_list_p">
+					<li class="sc_list">
+						<p class="sc_list_p scr">
 							<span class="pi_tit email">Email:</span>
 							<a href="mailto:enji1560@naver.com" target="_blank" class="pi_link notranslate">enji1560@naver.com</a>
 						</p>
-						<p class="sc_list_p">
+						<p class="sc_list_p scr">
 							<span class="pi_tit telephone">Telephone:</span>
 							<a href="tel:+82-10-XXXX-XXXX" target="_blank" class="pi_link notranslate">+82-10-XXXX-XXXX</a>
 						</p>
-						<p class="sc_list_p">
+						<p class="sc_list_p scr">
 							<span class="pi_tit location">Location:</span>
 							<a href="https://goo.gl/maps/c99g2WcN314J5zxn6" target="_blank" class="pi_link">Seoul, Republic of Korea</a>
 						</p>
-						<p class="sc_list_p">
+						<p class="sc_list_p scr">
 							<span class="pi_tit homepage">Homepage:</span>
 							<a href="https://enji1115.github.io/portfolio/" target="_blank" class="pi_link notranslate">https://enji1115.github.io/portfolio/</a>
 						</p>
-						<p class="sc_list_p">
+						<p class="sc_list_p scr">
 							<span class="pi_tit github">GitHub:</span>
 							<a href="https://github.com/enji1115" target="_blank" class="pi_link notranslate">https://github.com/enji1115</a>
 						</p>
-						<p class="sc_list_p">
+						<p class="sc_list_p scr">
 							<span class="pi_tit workinghours">Working hours(KST):</span>
 							9:30 a.m. to 6:30 p.m. <small>(Lunch hour: 11:50 a.m. - 12:50 a.m.)</small>
 						</p>
-						<div class="sc_list_p">
-							<span class="pi_tit certificates">Certificates</span>
+						<div class="sc_list_p scr">
+							<span class="pi_tit certificates">Certificates<sup>2</sup></span>
 							<ul class="sc_list_wrap">
 								<li class="sc_list scr">
-									<p class="sc_list_tit"></p>
-									<p class="sc_list_subtit"></p>
-									<p class="sc_list_p">2019</p>
+									<p class="sc_list_tit">Web Design Specialist</p>
+									<p class="sc_list_subtit">National Technical Qualification</p>
+									<p class="sc_list_p">2018.09.21</p>
+									<p class="sc_list_p">Human Resources Development Service of Korea</p>
 								</li>
 								<li class="sc_list scr">
-									<p class="sc_list_tit"></p>
-									<p class="sc_list_subtit"></p>
-									<p class="sc_list_p">2018</p>
+									<p class="sc_list_tit">GTQ(Graphic Technical Qualification)</p>
+									<p class="sc_list_subtit">Level 1</p>
+									<p class="sc_list_p">2018.07.13</p>
+									<p class="sc_list_p">Korea Productivity Center</p>
 								</li>
 							</ul>
 						</div>
-						<div class="sc_list_p">
-							<span class="pi_tit awards">Awards</span>
+						<div class="sc_list_p scr">
+							<span class="pi_tit awards">Awards<sup>6</sup></span>
 							<ul class="sc_list_wrap">
 								<li class="sc_list scr">
 									<a href="http://www.i-award.or.kr/Web/Assess/FinalCandidateView.aspx?REG_SEQNO=10561" target="_blank" class="pi_awd_link">

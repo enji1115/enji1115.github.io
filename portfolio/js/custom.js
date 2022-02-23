@@ -25,14 +25,24 @@ $(document).ready(function() {
 	// e: common
 
 	// s: header
+	// Hamberger button - toggle menu popup
+	$('.btn_ham').on('click', function(){
+		$('body').toggleClass('menuOn');
+	});
+	function menuOff() {
+		if ($('body').hasClass('menuOn')) $('body').removeClass('menuOn');
+	}
 	// Logo and Top button - scroll Top
-	$('.btn_logo, .btn_top').on('click', function(){
+	$('.btn_logo, .btn_top').on('click', function(e){
+		e.preventDefault();
+		menuOff();
 		$('html, body').stop(true, false).animate({scrollTop: '0'}, 700);
 	});
 	// gnb link - scroll move content
 	var gnb_link_tgt = '';
 	$('.gnb_link').on('click', function(e){
 		e.preventDefault();
+		menuOff();
 		gnb_link_tgt = $(this).attr('href');
 		$('html, body').stop(true, false).animate({scrollTop: $(gnb_link_tgt).offset().top + 8}, 700);
 	});
@@ -48,7 +58,7 @@ $(document).ready(function() {
 			var tgt_cat = tgt_data.category;
 			if (cat == 'LATEST' || tgt_cat.indexOf(cat) > -1) {
 				expPrj_list += `
-					<li class="sc_list expPrj_list expPrj_list_${tgt_data.num}">
+					<li class="sc_list expPrj_list expPrj_list_${i}">
 						<button type="button" class="btn_scList_more btn_expPrj">
 							<h4 class="sc_list_tit expPrj_tit"><span>${tgt_data.title}</span></h4>
 							<h3 class="sc_list_subtit expPrj_subtit">${tgt_data.subtitle}</h3>
@@ -61,7 +71,7 @@ $(document).ready(function() {
 							${tgt_data.info}
 							</p>
 						</div>
-						<style>.expPrj_list_${tgt_data.num}.conOn {background-color: ${tgt_data.background};}</style>
+						<style>.expPrj_list_${i}.conOn {background-color: ${tgt_data.background};}</style>
 					</li>
 				`;
 			}
@@ -79,6 +89,7 @@ $(document).ready(function() {
 	// project's btn_scList_more
 	$('.expPrj_list_wrap').on('click', '.btn_expPrj', function(){
 		$(this).parent('.sc_list').toggleClass('conOn');
+		if ($(window).width() < 768 && $(this).parent('.sc_list').hasClass('conOn')) $('html, body').stop(true, true).animate({scrollTop: $(this).offset().top - $('.logo').height()*3}, 700);
 	});
 	// project category slider
 	var swiper_expPrjCat_list = new Swiper(".expPrjCat_list_wrap", {
@@ -121,8 +132,8 @@ $(document).ready(function() {
 
 		// s: header
 		// wrap - detect top
-		if (scroll > $('.logo').height()) $('.wrap').addClass('onTop');
-		else $('.wrap').removeClass('onTop');
+		if (scroll > $('.logo').height()) $('.wrap').addClass('offTop');
+		else $('.wrap').removeClass('offTop');
 		// gnb_list - detect content
 		gnbList_i = 0;
 		while (gnbList_i < $('.sc').length) {
