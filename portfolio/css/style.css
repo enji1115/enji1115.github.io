@@ -42,13 +42,22 @@ sup {vertical-align: super; font-size: smaller;}
 				.sc_list + .sc_list {margin-top: 3em;}
 					.sc_list + .sc_list::before {content: ''; display: block; width: 100%; position:absolute; left: 0; top: -1.5em; border-top: solid 1px; opacity: 0.5;}
 				.sc_list_tit {position: relative; font-weight: 700; font-size: 2.5em; letter-spacing: -0.025em;}
-				.sc_list_subtit {position: relative; font-weight: 500; font-size: 2em; letter-spacing: -0.025em;}
+				.sc_list_subtit {position: relative; font-weight: 500; font-size: 1.8em; letter-spacing: -0.05em;}
 					* + .sc_list_subtit {margin-top: 0.2em;}
 					.sc_list_subtit strong {font-weight: 700;}
 				.sc_list_p {position: relative; font-size: 1.5em; letter-spacing: -0.025em;}
 					* + .sc_list_p {margin-top: 0.5em;}
-				.sc_list_area {position: relative; font-size: 1.4em; letter-spacing: -0.025em;}
+				.sc_list_area {position: relative; font-size: 1.4em; letter-spacing: -0.05em;}
 					* + .sc_list_area {margin-top: 1em;}
+					.sc_list_area_tit {display: block; font-size: 1.4em; font-weight: 600; letter-spacing: -0.05em;}
+					.sc_list_area span.sc_disc {font-size: 0.8em;}
+					.sc_list_area span + span {display: block; margin-top: 0.5em; text-indent: 0.25em;}
+						.sc_list_area span + span.sc_list_area_tit {margin-top: 1em; text-indent: 0;}
+						.sc_list_area span + span.sc_list_area_link {margin-top: 1.5em;}
+					.sc_list_area a {display: inline-block; padding: 0.4em 1em; font-size: 0.9em; text-indent: 0; border-radius: 10em; border: solid 1px; opacity: 0.9;}
+						.sc_list_area a:hover {opacity: 1;}
+						.sc_list_area a.more {font-size: 0.7em;}
+						.sc_list_area a + a {margin-left: 1em;}
 				.btn_scList_more {display: block; width: 100%; position: relative; opacity: 0.8;}
 					.btn_scList_more::after {content: ''; display: block; width: 2em; height: 2em; position: absolute; right: 1em; top: 0.5em; transform: rotate(45deg); border-style: solid; border-width: 0 0.5em 0.5em 0; box-sizing: border-box;}
 					.sc_list.conOn .btn_scList_more::after {transform: rotate(225deg) translate(-25%,-25%);}
@@ -57,6 +66,7 @@ sup {vertical-align: super; font-size: smaller;}
 						.btn_scList_more .sc_list_tit span {display: inline-block; position: relative;}
 							.btn_scList_more .sc_list_tit::before {content: ''; display: block; width: 0%; height: 0.4em; position: absolute; left: 0%; bottom: 0.2em; background: rgba(220, 155, 135, 0);}
 								.btn_scList_more:hover .sc_list_tit::before, .sc_list.conOn .btn_scList_more .sc_list_tit::before {width: 100%; background: rgba(220, 155, 135, 0.5); transition: width .3s;}
+					.btn_scList_more .sc_list_subtit {font-size: 1.6em;}
 				.scList_more {height: 0; box-sizing: border-box; overflow: hidden;}
 					.sc_list.conOn .scList_more {height: auto; padding-top: 1.5em;}
 /* e: common */
@@ -120,11 +130,11 @@ sup {vertical-align: super; font-size: smaller;}
 /* e: scIntro */
 
 /* s: scExperience */
-.scExperience {background: #151515 linear-gradient(90deg, #562957 0%, #562957 10%, #151515 90%, #151515 100%);}
+.scExperience {background: #151515 linear-gradient(-90deg, #562957 0%, #562957 10%, #151515 90%, #151515 100%);}
 	.expPrjCat_list_wrap {width: 100%; position: relative; margin-top: 2em; overflow: hidden;}
 		.expPrjCat_list_wrap::before, .expPrjCat_list_wrap::after {content: ''; display: block; width: 5em; height: 120%; position: absolute; top: -10%; pointer-events: none; z-index: 2; opacity: 1; transition: opacity .3s;}
-			.expPrjCat_list_wrap::before {left: -1px; background: linear-gradient(90deg, #562957, transparent);}
-			.expPrjCat_list_wrap::after {right: -1px; background: linear-gradient(-90deg, #151515, transparent);}
+			.expPrjCat_list_wrap::before {left: -1px; background: linear-gradient(90deg, #151515, transparent);}
+			.expPrjCat_list_wrap::after {right: -1px; background: linear-gradient(-90deg, #562957, transparent);}
 			.expPrjCat_list_wrap.onBeg::before, .expPrjCat_list_wrap.onEnd::after {opacity: 0;}
 		.expPrjCat_list_inner {width: 100%; position: relative; padding: 1px 0;}
 			.expPrjCat_list {display: inline-block; width: auto;}
@@ -186,8 +196,9 @@ sup {vertical-align: super; font-size: smaller;}
 			.footer_p:last-child {margin-top: 1.5em; font-size: 1.4em; opacity: 1;}
 /* e: footer */
 
-/* ie */
-.ie {}
+/* s: ie */
+.scIE {min-height: calc(100vh - 22.85em); background: #252525 linear-gradient(#252525, #000000);}
+/* e: ie */
 
 /* mid screen */
 @media screen and (max-width: 1600px) {

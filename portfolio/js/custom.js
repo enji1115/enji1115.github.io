@@ -1,12 +1,5 @@
-﻿function detectIEEdge() {
-    var agent = navigator.userAgent.toLowerCase();
-	if ((navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) $('body').addClass('ie');
-}
-$(document).ready(function() {
+﻿$(document).ready(function() {
 	// s: common
-	// detect IE Edge
-	detectIEEdge();
-
 	// scroll checker - use
 	$('.scr').viewportChecker({
 		classToAdd: 'on',
@@ -71,7 +64,7 @@ $(document).ready(function() {
 							${tgt_data.info}
 							</p>
 						</div>
-						<style>.expPrj_list_${i}.conOn {background-color: ${tgt_data.background};}</style>
+						<style>.expPrj_list_${i}.conOn {background: ${tgt_data.background};}</style>
 					</li>
 				`;
 			}

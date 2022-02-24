@@ -22,8 +22,11 @@ var ary_expPrj = [
         client: 'Security',
 		category: 'CSS3, HTML, Javascript, jQuery, Canvas',
         info: `
-            By displaying the image sequence differently depending on the scroll position, we proceeded with the project as if the video was playing. <br>
-            I've created a prototype for a design demonstration and a page that requires the use of scroll transitions and a canvas.
+            <span class="sc_list_area_tit">Main Content</span>
+            <span>By displaying the image sequence differently depending on the scroll position, we proceeded with the project as if the video was playing.</span>
+
+            <span class="sc_list_area_tit">Contribution</span>
+            <span>I've created a prototype for a design demonstration and a page that requires the use of scroll transitions and a canvas.</span>
         `,
         background: 'rgba(34, 56, 135,0.5)'
 	},

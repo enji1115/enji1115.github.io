@@ -31,8 +31,15 @@
 	<link rel="stylesheet" href="./css/style.css" />
 
 	<script type="text/javascript" src="./js/libs.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// detect IE Edge
+			var agent = navigator.userAgent.toLowerCase();
+			if ((navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) location.replace('./ie_sorry.html');
+		});
+	</script>
 	<script type="text/javascript" src="./js/swiper.min.js"></script>
-	<script type="text/javascript" src="./data/projects/projects_v220221.js"></script>
+	<script type="text/javascript" src="./data/projects/projects_kor_v220221.js"></script><!-- eng | kor -->
 	<script type="text/javascript" src="./js/custom.js"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -88,7 +95,7 @@
 			<button type="button" class="btn_top"><span class="el_hid">Go to page top</span></button>
 		</header>
 
-		<section class="sc scIntro" id="Top">			
+		<section class="sc scIntro" id="Top">
 			<div class="scroll_wrap">
 				<div class="frame scroll_bg"></div>
 				<div class="frame scroll_logo"></div>
@@ -234,8 +241,8 @@
 						</p>
 					</li>
 					<li class="sc_list scr">
-						<h3 class="sc_list_tit">Solutions</h3>
-						<h4 class="sc_list_subtit notranslate">Attractt, Beusable, Cafe24, godomall5</h4>
+						<h3 class="sc_list_tit">Solutions and Plugin</h3>
+						<h4 class="sc_list_subtit notranslate">Attractt, Beusable, Cafe24, godomall5, Swiper</h4>
 						<p class="sc_list_p">
 							I've been working on a project using these solutions.
 						</p>
