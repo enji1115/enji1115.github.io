@@ -39,6 +39,10 @@
 		gnb_link_tgt = $(this).attr('href');
 		$('html, body').stop(true, false).animate({scrollTop: $(gnb_link_tgt).offset().top + 8}, 700);
 	});
+	// lang link - if it is currently on, the link does not work.
+	$('.lang_link.on').on('click', function(e){
+		e.preventDefault();
+	});
 	// e: header
 
 	// s: scExperience
@@ -82,7 +86,7 @@
 	// project's btn_scList_more
 	$('.expPrj_list_wrap').on('click', '.btn_expPrj', function(){
 		$(this).parent('.sc_list').toggleClass('conOn');
-		if ($(window).width() < 768 && $(this).parent('.sc_list').hasClass('conOn')) $('html, body').stop(true, true).animate({scrollTop: $(this).offset().top - $('.logo').height()*3}, 700);
+		if ($(this).parent('.sc_list').hasClass('conOn')) $('html, body').stop(true, true).animate({scrollTop: $(this).offset().top - $('.logo').height()*3}, 500);
 	});
 	// project category slider
 	var swiper_expPrjCat_list = new Swiper(".expPrjCat_list_wrap", {

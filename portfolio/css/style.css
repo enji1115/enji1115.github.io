@@ -149,7 +149,7 @@ sup {vertical-align: super; font-size: smaller;}
 /* e: scExperience */
 
 /* s: scEducation */
-.scEducation {background: #ffe3c2 linear-gradient(-45deg, #ffd3c2, #ffe3c2);}
+.scEducation {background: #ffe3c2 linear-gradient(-45deg, #ffe3c2, #ffd3c2);}
 	.scEducation .sc_list_p {display: inline-block;}
 		.scEducation .sc_list_p + .sc_list_p::before {content: ''; display: inline-block; width: 1em;}
 		.scEducation .sc_list_p + .sc_list_p::after {content: ''; display: block; width: 0; height: 1em; position: absolute; left: 0.3em; top: 0.25em; border-right: solid 1px; opacity: 0.5;}
