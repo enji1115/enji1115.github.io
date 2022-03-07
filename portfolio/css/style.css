@@ -14,6 +14,9 @@ sup {vertical-align: super; font-size: smaller;}
 .img_base {display:block; width:100%; position:relative;}
 .img_cv {display:block; width:100%; position:absolute; left:0; top:0;}
 .inb {display: inline-block;}
+.out_link::after {content: ''; display: inline-block; width: 1em; height: 1em; position:relative; margin-top: 0.2em; margin-left: 0.4em; vertical-align: top; background-image: url('../data/images/common/info_icon.svg?v=1'); background-repeat: no-repeat; background-size: auto 200%; background-position: 25% 100%;}
+	.scPersonalInfo .out_link::after {background-position: 50% 100%;}
+	.footer .out_link::after {margin-top: 0em;}
 
 .scr, .scr_rp {position: relative; transform: translateY(8rem); opacity: 0; transition: transform 1s, opacity 1s;}
 	.scr.on, .scr_rp.on {transform: translateY(0rem); opacity: 1;}
@@ -33,7 +36,7 @@ sup {vertical-align: super; font-size: smaller;}
 		.light .sc_inner {color: #000;}
 		.sc_tit {font-weight: 700; font-size: 4em; letter-spacing: -0.01em; line-height: 1.7;}
 			* + .sc_tit {margin-top: 1em;}
-		.sc_disc {font-size: 1.1em;}
+		.sc_disc {font-size: 1.1em; letter-spacing: -0.05em; line-height: 1.4; word-break: keep-all;}
 			.dark .sc_disc {color: rgb(255, 255, 255, 0.8);}
 			.light .sc_disc {color: rgb(0, 0, 0, 0.8);}
 		.sc_list_wrap {line-height: 1.4;}
@@ -105,6 +108,9 @@ sup {vertical-align: super; font-size: smaller;}
 			.wrap.offTop .btn_top:hover {opacity: 1;}
 		.btn_top::before {content: ''; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: #fff;}
 		.btn_top::after {content: ''; display: block; width: 1.5em; height: 1.5em; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -25%) rotate(45deg); border-style: solid; border-width: 0.4em 0 0 0.4em; box-sizing: border-box;}
+	.prgbar {width: 8px; height: 100%; position: fixed; left: 0%; top: 0%; background: #777; mix-blend-mode: difference;
+		z-index: 999;}
+		.prgbar_inner {width: 100%; height: 0%; position: absolute; left: 0%; top: 0%; background: #fff; transition: height .3s;}
 /* e: header */
 
 /* s: scIntro */
@@ -166,7 +172,7 @@ sup {vertical-align: super; font-size: smaller;}
 			.scPersonalInfo .sc_list + .sc_list::before {top: -0.5em;}
 		.scPersonalInfo .sc_list_p {font-size: 1.8em;}
 			.pi_tit {font-weight: 700;}
-				.pi_tit::before {content: ''; display: inline-block; width: 1em; height: 1em; position:relative; margin-top: 0.2em; margin-right: 0.4em; vertical-align: top; background-image: url('../data/images/common/info_icon.svg?v=0'); background-repeat: no-repeat; background-size: auto 200%;}
+				.pi_tit::before {content: ''; display: inline-block; width: 1em; height: 1em; position:relative; margin-top: 0.2em; margin-right: 0.4em; vertical-align: top; background-image: url('../data/images/common/info_icon.svg?v=1'); background-repeat: no-repeat; background-size: auto 200%;}
 				.pi_tit.email::before {background-position: 0% 0%;}
 				.pi_tit.telephone::before {background-position: 25% 0%;}
 				.pi_tit.location::before {background-position: 50% 0%;}
@@ -192,7 +198,7 @@ sup {vertical-align: super; font-size: smaller;}
 		.footer_p {font-size: 1.1em; opacity: 0.9;}
 			.footer_p a {opacity: 0.8;}
 				.footer_p a:hover {opacity: 1;}
-			.footer_p + .footer_p {margin-top: 0.5em;}
+			.footer_p + .footer_p {margin-top: 0.75em;}
 			.footer_p:last-child {margin-top: 1.5em; font-size: 1.4em; opacity: 1;}
 /* e: footer */
 
@@ -248,6 +254,7 @@ sup {vertical-align: super; font-size: smaller;}
 					.menuOn .btn_ham_bar.mid {opacity: 0;}
 					.menuOn .btn_ham_bar.btm {transform: translateX(-50%) translateY(0%) rotate(-45deg);}
 	.wrap.offTop .btn_top:hover {opacity: 0.8;}
+	.prgbar {width: 4px;}
 	/* e: header */
 
 	/* s: scIntro */
@@ -261,7 +268,21 @@ sup {vertical-align: super; font-size: smaller;}
 	/* e: scExperience */
 }
 
+/* tablet - long */
+@media screen and (max-width: 768px) and (max-aspect-ratio: 2/3) {
+	/* s: scIntro */
+	.scroll_logo {background-size: auto 72%;}
+	/* e: scIntro */
+}
+
 /* mobile */
 @media screen and (max-width: 400px) {
 	.wrap {font-size: 0.5em;}
+	/* s: scPersonalInfo */
+	.pi_link {font-size: 0.9em;}
+	/* e: scPersonalInfo */
+
+	/* e: footer */
+	.footer_p + .footer_p {margin-top: 1.75em;}
+	/* e: footer */
 }

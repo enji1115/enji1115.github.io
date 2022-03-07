@@ -21,7 +21,7 @@ var ary_expPrj = [
 
     //         <span class="sc_list_area_tit">결과 및 성과</span>
     //         <span>결과및성과</span>
-    //         <span class="sc_list_area_link"><a href="http" target="_blank">개발 URL</a><a href="http" target="_blank">서비스 URL</a></span>
+    //         <span class="sc_list_area_link"><a href="http" target="_blank" class="out_link">개발 URL</a><a href="http" target="_blank" class="out_link">서비스 URL</a></span>
     //         <span class="sc_disc"><sup>*</sup>디스클라이머</span>
     //     `,
     //     background: 'transparent'
@@ -95,7 +95,6 @@ var ary_expPrj = [
             <span class="sc_list_area_tit">기여한 점</span>
             <span> 초기 기획을 듣고 전체적인 흐름을 파악하여 기획팀과 디자인팀에서 사용할 수 있는 트랜지션을 프로토타입으로 제안했습니다. 내외부 커뮤니케이션에 프로토타입을 활용하여 아이데이션과 실제 시안 작업에 도움을 드렸습니다.</span>
             <span> 디자인 팀에서 사용하고자 하는 애니메이션 레퍼런스를 제안하면 피저빌리티 체크를 진행하고 스케줄 상 불가한 부분은 다른 방안을 제안했습니다. 이러한 커뮤니케이션을 통해 짧은 스케줄 내에서 모든 팀이 만족할 수 있는 결과물을 만들 수 있었습니다.</span>
-            <span>기여한 점</span>
 
             <span class="sc_list_area_tit">사용한 기술 스택 및 지식</span>
             <span>HTML5, CSS3, jQuery, JavaScript</span>
@@ -103,7 +102,7 @@ var ary_expPrj = [
 
             <span class="sc_list_area_tit">결과 및 성과</span>
             <span>잘 마무리되어 연계된 작업을 추가로 진행했습니다.</span>
-            <span class="sc_list_area_link"><a href="http://webhtml.newturn.co.kr/lg_cej/210422/" target="_blank">개발 URL</a></span>
+            <span class="sc_list_area_link"><a href="http://webhtml.newturn.co.kr/lg_cej/210422/" target="_blank" class="out_link">개발 URL</a></span>
             <span class="sc_disc"><sup>*</sup>서비스 URL이 따로 없습니다.</span>
         `,
         background: '#A50034'
@@ -132,8 +131,8 @@ var ary_expPrj = [
 
             <span class="sc_list_area_tit">결과 및 성과</span>
             <span>클라이언트가 만족하여 다른 프로젝트를 의뢰하였습니다.</span>
-            <span>웹어워드 코리아에서 가구분야 대상을 수상했습니다. <a href="http://www.i-award.or.kr/Web/Assess/FinalCandidateView.aspx?REG_SEQNO=10561" target="_blank" class="more">자세히 보기</a></span>
-            <span class="sc_list_area_link"><a href="http://fb.newturn.co.kr/iloom/" target="_blank">개발 URL</a></span>
+            <span>웹어워드 코리아에서 가구분야 대상을 수상했습니다. <a href="http://www.i-award.or.kr/Web/Assess/FinalCandidateView.aspx?REG_SEQNO=10561" target="_blank" class="more out_link">자세히 보기</a></span>
+            <span class="sc_list_area_link"><a href="http://fb.newturn.co.kr/iloom/" target="_blank" class="out_link">개발 URL</a></span>
             <span class="sc_disc"><sup>*</sup>운영이 종료되어 현재 서비스 중인 URL은 없습니다.</span>
         `,
         background: '#124b68'
@@ -159,9 +158,9 @@ var ary_expPrj = [
 
             <span class="sc_list_area_tit">결과 및 성과</span>
             <span> 다양한 인터렉션을 사용하여 좋은 반응을 얻었고, 추후 사내 커뮤니케이션에 해당 페이지를 레퍼런스로 사용하는 경우가 있었습니다.</span>
-            <span class="sc_list_area_link"><a href="https://www.lge.co.kr/smartphones/lm-g900n" target="_blank">서비스 URL</a></span>
+            <span class="sc_list_area_link"><a href="https://www.lge.co.kr/smartphones/lm-g900n" target="_blank" class="out_link">서비스 URL</a></span>
             <span class="sc_disc"><sup>*</sup>콘텐츠 페이지가 들어 있는 사이트가 리뉴얼되어서 조금 틀어지는 부분이 있습니다.</span>
-            <span class="sc_list_area_link"><a href="https://www.newturngroup.com/portfolio_view_lg_velvet.php" target="_blank">개발 URL</a></span>
+            <span class="sc_list_area_link"><a href="https://www.newturngroup.com/portfolio_view_lg_velvet.php" target="_blank" class="out_link">개발 URL</a></span>
             <span class="sc_disc"><sup>*</sup>저의 작업이 보존된 버전의 URL을 추가로 공유해 드립니다.</span>
         `,
         background: '#451455 linear-gradient(135deg, #10444f 0%, #451455 100%)'
@@ -186,8 +185,8 @@ var ary_expPrj = [
             <span>GitLab을 활용한 버전 관리</span>
 
             <span class="sc_list_area_tit">결과 및 성과</span>
-            <span>앤어워드에서 디지털 미디어 & 서비스 부문 중소전문기업 분야 Winner를 수상했습니다. <a href="https://naward.or.kr/archive/winners/2020?w_id=3207" target="_blank" class="more">자세히 보기</a></span>
-            <span class="sc_list_area_link"><a href="https://www.focusmediakorea.com/" target="_blank">서비스 URL</a></span>
+            <span>앤어워드에서 디지털 미디어 & 서비스 부문 중소전문기업 분야 Winner를 수상했습니다. <a href="https://naward.or.kr/archive/winners/2020?w_id=3207" target="_blank" class="more out_link">자세히 보기</a></span>
+            <span class="sc_list_area_link"><a href="https://www.focusmediakorea.com/" target="_blank" class="out_link">서비스 URL</a></span>
         `,
         background: '#56498b'
     },
@@ -211,7 +210,7 @@ var ary_expPrj = [
 
             <span class="sc_list_area_tit">결과 및 성과</span>
             <span>구축 완료 후 정상 운영 중입니다.</span>
-            <span class="sc_list_area_link"><a href="https://www.vava-village.com/" target="_blank">서비스 URL</a></span>
+            <span class="sc_list_area_link"><a href="https://www.vava-village.com/" target="_blank" class="out_link">서비스 URL</a></span>
         `,
         background: '#f87f2e'
 	},
@@ -235,8 +234,8 @@ var ary_expPrj = [
             <span>GitLab을 활용한 버전 관리</span>
 
             <span class="sc_list_area_tit">결과 및 성과</span>
-            <span>웹어워드 코리아에서 공공글로벌서비스분야 대상을 수상했습니다. <a href="http://www.i-award.or.kr/Web/Assess/FinalCandidateView.aspx?REG_SEQNO=9401" target="_blank" class="more">자세히 보기</a></span>
-            <span class="sc_list_area_link"><a href="http://fb.newturn.co.kr/kto-global/" target="_blank">개발 URL</a></span>
+            <span>웹어워드 코리아에서 공공글로벌서비스분야 대상을 수상했습니다. <a href="http://www.i-award.or.kr/Web/Assess/FinalCandidateView.aspx?REG_SEQNO=9401" target="_blank" class="more out_link">자세히 보기</a></span>
+            <span class="sc_list_area_link"><a href="http://fb.newturn.co.kr/kto-global/" target="_blank" class="out_link">개발 URL</a></span>
             <span class="sc_disc"><sup>*</sup>운영이 종료되어 현재 서비스 중인 URL은 없습니다. 일부 기능이 작동하지 않습니다.</span>
         `,
         background: '#318268'
@@ -262,8 +261,8 @@ var ary_expPrj = [
 
             <span class="sc_list_area_tit">결과 및 성과</span>
             <span>일정에 차질 없이 오픈하여 연계된 이벤트 페이지 작업도 진행할 수 있었습니다.</span>
-            <span>웹어워드 코리아에서 제품브랜드분야 최우수상을 수상했습니다. <a href="http://www.i-award.or.kr/Web/Assess/FinalCandidateView.aspx?REG_SEQNO=9399" target="_blank" class="more">자세히 보기</a></span>
-            <span class="sc_list_area_link"><a href="http://fb.newturn.co.kr/sulwhasoo/" target="_blank">개발 URL</a></span>
+            <span>웹어워드 코리아에서 제품브랜드분야 최우수상을 수상했습니다. <a href="http://www.i-award.or.kr/Web/Assess/FinalCandidateView.aspx?REG_SEQNO=9399" target="_blank" class="more out_link">자세히 보기</a></span>
+            <span class="sc_list_area_link"><a href="http://fb.newturn.co.kr/sulwhasoo/" target="_blank" class="out_link">개발 URL</a></span>
             <span class="sc_disc"><sup>*</sup>운영이 종료되어 현재 서비스 중인 URL은 없습니다. 일부 기능이 작동하지 않습니다.</span>
         `,
         background: '#873b50'
@@ -287,8 +286,8 @@ var ary_expPrj = [
             <span>HTML5, CSS3, jQuery, Javascript</span>
 
             <span class="sc_list_area_tit">결과 및 성과</span>
-            <span>앤어워드에서 DIGITAL AD & CAMPAIGNS 부문 Charitable Organizations / Non- Profit 분야 Winner를 수상했습니다. <a href="https://naward.or.kr/archive/winners/2018?w_id=2128" target="_blank" class="more">자세히 보기</a></span>
-            <span class="sc_list_area_link"><a href="http://fb.newturn.co.kr/sbisavingproject/" target="_blank">개발 URL</a></span>
+            <span>앤어워드에서 DIGITAL AD & CAMPAIGNS 부문 Charitable Organizations / Non- Profit 분야 Winner를 수상했습니다. <a href="https://naward.or.kr/archive/winners/2018?w_id=2128" target="_blank" class="more out_link">자세히 보기</a></span>
+            <span class="sc_list_area_link"><a href="http://fb.newturn.co.kr/sbisavingproject/" target="_blank" class="out_link">개발 URL</a></span>
             <span class="sc_disc"><sup>*</sup>운영이 종료되어 현재 서비스 중인 URL은 없습니다.</span>
         `,
         background: '#3d6740'
@@ -306,7 +305,7 @@ var ary_expPrj = [
             <span>디자인과 개발이 거의 진행된 상황에서 전임분께 인수인계받아서 기능 추가 및 수정 사항을 작업했습니다. 오픈 후에는 운영 업무를 맡아서 포트폴리오, 뉴스, 어워드 추가 작업을 진행했습니다.</span>
 
             <span class="sc_list_area_tit">기여한 점</span>
-            <span>백엔드 개발이 필요한 부분은 외주 개발사에서 작업하여 해당 커뮤니케이션을 맡았었습니다.</span>
+            <span>백엔드 개발이 필요한 부분은 외주 개발사에서 작업하여 해당 커뮤니케이션을 맡았습니다.</span>
             <span>반려된 기획에 대하여 최대한 제가 작업할 수 있는 방향으로 제안하여 디자이너와 기획자가 원하는 결과물을 만들 수 있도록 커뮤니케이션했습니다.</span>
 
             <span class="sc_list_area_tit">사용한 기술 스택 및 지식</span>
@@ -314,8 +313,8 @@ var ary_expPrj = [
             <span>Swiper 다양한 기능 활용</span>
 
             <span class="sc_list_area_tit">결과 및 성과</span>
-            <span>웹어워드 코리아에서 웹/광고에이전시분야 대상을 수상했습니다. <a href="http://www.i-award.or.kr/Web/Assess/FinalCandidateView.aspx?REG_SEQNO=8336" target="_blank" class="more">자세히 보기</a></span>
-            <span class="sc_list_area_link"><a href="https://www.newturngroup.com/" target="_blank">서비스 URL</a></span>
+            <span>웹어워드 코리아에서 웹/광고에이전시분야 대상을 수상했습니다. <a href="http://www.i-award.or.kr/Web/Assess/FinalCandidateView.aspx?REG_SEQNO=8336" target="_blank" class="more out_link">자세히 보기</a></span>
+            <span class="sc_list_area_link"><a href="https://www.newturngroup.com/" target="_blank" class="out_link">서비스 URL</a></span>
         `,
         background: '#000'
     },

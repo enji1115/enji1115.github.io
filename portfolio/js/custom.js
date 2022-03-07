@@ -111,9 +111,10 @@
 	// e: scExperience
 
 	// s: scroll function
-	var scroll = $(window).scrollTop(), win_h = $(window).height();
+	var scroll = $(window).scrollTop(), win_h = $(window).height(), win_w = $(window).width();
 	// s: header
 	var gnbList_i = 0, gnbList_ary = [], gnbList_tgt = '';
+	var prg_per = 0;
 	// e: header
 	// s: scIntro
 	var scIntro_top = $('.scIntro').offset().top, scIntro_btm = scIntro_top + $('.scIntro').height();
@@ -126,6 +127,7 @@
 	function scrollTransition(){
 		scroll = $(window).scrollTop();
 		win_h = $(window).height();
+		win_w = $(window).width();
 
 		// s: header
 		// wrap - detect top
@@ -136,10 +138,18 @@
 		while (gnbList_i < $('.sc').length) {
 			if (scroll >= $('.sc').eq(gnbList_i).offset().top - win_h*0.1
 				&& scroll < $('.sc').eq(gnbList_i).offset().top - win_h*0.1 + $('.sc').eq(gnbList_i).height()) {
+				$('.gnb_list').removeClass('on');
 				if (gnbList_i !== 0) {
-					$('.gnb_list').removeClass('on');
 					$('.gnb_list').eq(gnbList_i - 1).addClass('on');
-				} else $('.gnb_list').removeClass('on');
+					if (gnbList_i < $('.sc').length - 1) prg_per = (scroll - $('.sc').eq(gnbList_i).offset().top + win_h*0.1)/$('.sc').eq(gnbList_i).height()*100;
+					else {
+						if (win_w <= 768) prg_per = (scroll - $('.sc').eq(gnbList_i).offset().top + win_h*0.1)/($('.sc').eq(gnbList_i).height() - ($('.footer').height() + win_h*0.2))*100;
+						else prg_per = (scroll - $('.sc').eq(gnbList_i).offset().top + win_h*0.1)/($('.sc').eq(gnbList_i).height() - ($('.footer').height() + win_h*0.1))*100;
+					}
+				} else {
+					prg_per = 0;
+				}
+				$('.prgbar_inner').css({'height': Math.ceil(prg_per)+'%'});
 				break
 			}
 			else gnbList_i += 1;
