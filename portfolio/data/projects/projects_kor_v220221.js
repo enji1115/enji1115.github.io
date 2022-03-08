@@ -85,7 +85,7 @@ var ary_expPrj = [
         // 46.LG 공상평 - LG전자 국내 공식 홈페이지 리뉴얼 보고용 페이지
         title: 'LG전자 국내 공식 홈페이지 리뉴얼 보고용 페이지',
         subtitle: '스크롤에 따른 트랜지션을 활용한 보고용 마이크로페이지 제작',
-        date: '2020.12.21 ~ 2021.04.27',
+        date: '2021.03.26 ~ 2021.04.27',
         client: 'LG전자',
 	    category: 'HTML5, CSS3, jQuery, JavaScript',
         info: `
@@ -168,7 +168,7 @@ var ary_expPrj = [
     {
         // 31.포커스미디어코리아
         title: '포커스미디어코리아 공식 홈페이지',
-        subtitle: 'Angular 기반 공식 홈페이지 제작 참여',
+        subtitle: 'Angular 기반 공식 홈페이지 리뉴얼 참여 및 운영',
         date: '2020.4.16 ~ 2020.12.14',
         client: 'Focusmedia Korea',
         category: 'Award, Angular, HTML5, PHP, CSS3, Less, jQuery, Javascript, Canvas, GitLab, Slack, Zeplin',
@@ -243,7 +243,7 @@ var ary_expPrj = [
     {
         // 12.설화수 설린 디지털 팝업스토어
         title: '설화수 설린 디지털 팝업스토어',
-        subtitle: 'Angular 기반 신제품 체험 마이크로사이트 프로젝트 제작 참여',
+        subtitle: 'Angular 기반 신제품 체험 마이크로사이트 제작 참여',
         date: '2018.12.4 ~ 2019.3.15',
         client: 'Sulwhasoo',
         category: 'Award, Angular, HTML5, CSS3, Less, jQuery, Javascript, GitLab',
@@ -271,7 +271,7 @@ var ary_expPrj = [
         // 07.SBI 은행저축프로젝트
         title: 'SBI 은행저축프로젝트',
         subtitle: '캠페인 소개 마이크로페이지 제작',
-        date: '2018.12.4 ~ 2019.3.15',
+        date: '2018.11.2 ~ 2018.11.26',
         client: 'SBI저축은행',
         category: 'Award, HTML5, CSS3, jQuery, Javascript',
         info: `

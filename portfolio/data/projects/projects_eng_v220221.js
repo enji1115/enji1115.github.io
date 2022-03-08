@@ -85,7 +85,7 @@ var ary_expPrj = [
         // 46.LG 공상평 - LG전자 국내 공식 홈페이지 리뉴얼 보고용 페이지
         title: 'LG Electronics domestic official website renewal report page',
         subtitle: 'Creating micropages for reporting using transitions according to scrolling',
-        date: '2020.12.21 ~ 2021.04.27',
+        date: '2021.03.26 ~ 2021.04.27',
         client: 'LG Electronics',
 	    category: 'HTML5, CSS3, jQuery, JavaScript',
         info: `
@@ -243,7 +243,7 @@ var ary_expPrj = [
     {
         // 12.설화수 설린 디지털 팝업스토어
         title: 'Sulwhasoo Bloomstay digital pop-up store',
-        subtitle: 'Participated in Angular-based new product experience microsite project production',
+        subtitle: 'Participated in Angular-based new product experience microsite production',
         date: '2018.12.4 ~ 2019.3.15',
         client: 'Sulwhasoo',
         category: 'Award, Angular, HTML5, CSS3, Less, jQuery, Javascript, GitLab',
@@ -271,7 +271,7 @@ var ary_expPrj = [
         // 07.SBI 은행저축프로젝트
         title: 'SBI Saving Ginkgo project',
         subtitle: 'Create a campaign introduction micropage',
-        date: '2018.12.4 ~ 2019.3.15',
+        date: '2018.11.2 ~ 2018.11.26',
         client: 'SBI SAVINGS BANK',
         category: 'Award, HTML5, CSS3, jQuery, Javascript',
         info: `
