@@ -236,7 +236,7 @@ sup {vertical-align: super; font-size: smaller;}
 				.menuOn .gnb_list + .gnb_list {margin-top: 1em;}
 			.menuOn .lang_list_wrap {margin-top: 3em; font-size: 1.5em;}
 				.menuOn .lang_list + .lang_list::before {border-left: solid 1px rgba(0, 0, 0, 0.5);}
-				.menuOn .gnb_link, .menuOn .gnb_list.on .gnb_link, .menuOn .lang_link {color: #000;}
+				.menuOn .gnb_link, .menuOn .gnb_link:hover, .menuOn .gnb_list.on .gnb_link, .menuOn .gnb_list.on .gnb_link:hover, .menuOn .lang_link {color: #000;}
 		.gnb_link {}
 			.gnb_link:hover {color: rgba(255, 255, 255, 0.7);}
 			.gnb_list.on .gnb_link {color: rgba(255, 255, 255, 1);}
