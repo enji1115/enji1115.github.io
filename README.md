@@ -9,6 +9,7 @@ Studying...
 =============
 - :file_folder: coding_test
   - :file_folder: baekjoon
+  - :file_folder: python ← '미운코딩새끼'로 공부
 - :file_folder: js-object_oriented_programming ← '생활코딩'으로 공부
 - :file_folder: nodejs ← '생활코딩'으로 공부
   - :file_folder: nodejs

@@ -196,17 +196,72 @@
 #             break
 
 # ### 1085 - 직사각형에서 탈출
-
+# x, y, w, h = map(int, input().split())
+# mid_x = w/2
+# mid_y = h/2
+# calc_x = 0
+# calc_y = 0
+# if x < mid_x:
+#     calc_x = x
+# else:
+#     calc_x = w - x
+# if y < mid_y:
+#     calc_y = y
+# else:
+#     calc_y = h - y
+# if calc_x < calc_y:
+#     print(calc_x)
+# else:
+#     print(calc_y)
+# ## 고수님 풀이(https://ooyoung.tistory.com/102) - 정말 멋지다..
+# x, y, w, h = map(int, input().split())
+# print(min(x, y, w-x, h-y))
 
 # ### 3009 - 네 번째 점
-
+# ary_pos_x = []
+# ary_pos_y = []
+# for _ in range(3):
+#     x, y = map(int, input().split())
+#     ary_pos_x.append(x)
+#     ary_pos_y.append(y)
+# for i in range(3):
+#     if ary_pos_x.count(ary_pos_x[i]) == 1:
+#         x4 = ary_pos_x[i]
+#     if ary_pos_y.count(ary_pos_y[i]) == 1:
+#         y4 = ary_pos_y[i]
+# print(x4, y4)
 
 # ### 4153 - 직각삼각형
-
+# while True :
+#     nums = list(map(int, input().split()))
+#     if sum(nums) == 0:
+#         break
+#     max_num = max(nums)
+#     nums.remove(max_num)
+#     if nums[0]**2 + nums[1]**2 == max_num**2:
+#         print('right')
+#     else:
+#         print('wrong')
 
 # ### 3053 - 택시 기하학
-
+# import math
+# R = int(input())
+# pi = math.pi
+# print(round((R**2)*pi, 6))
+# print("{:.6f}".format((2*(R**2))))
 
 # ### 1002 - 터렛
-
-
+# ## 고수님 풀이(https://ooyoung.tistory.com/111) 대단하다..
+import math
+t = int(input())
+for _ in range(t):
+    x1, y1, r1, x2, y2, r2 = list(map(int, input().split()))
+    distance = math.sqrt((x1-x2)**2 + (y1-y2)**2) # 두 원의 거리 (원의방정식활용)
+    if distance == 0 and r1 == r2: # 두 원이 동심원이고 반지름이 같을 때
+        print(-1)
+    elif abs(r1-r2) == distance or r1 + r2 == distance: # 내접, 외접일 때
+        print(1)
+    elif abs(r1-r2) < distance < (r1+r2): # 두 원이 서로다른 두 점에서 만날 때
+        print(2)
+    else:
+        print(0) # 그 외에
