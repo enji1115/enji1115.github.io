@@ -111,7 +111,7 @@ var ary_expPrj = [
         // 48.일룸 플라세르 Showroom
         title: 'iloom PLACER Motion Lounge Bed Showroom',
         subtitle: 'Creating experiential microsites using transitions that emphasize product images',
-        date: '2020.9.10 ~ 2020.12.31',
+        date: '2020.09.10 ~ 2020.12.31',
         client: 'iloom',
 		category: 'Award, HTML5, PHP, CSS3, jQuery, JavaScript, Beusable',
         info: `
@@ -138,8 +138,8 @@ var ary_expPrj = [
         background: '#124b68'
 	},
 	{
-        // 39.LG LG VELVET 제품 상세페이지
-        title: 'LG LG VELVET product detail page',
+        // 39.LG전자 신제품 VELVET 상세페이지
+        title: 'LG Electronics new product VELVET detail page',
         subtitle: 'Creating a new product detail page using image sequences and scroll transitions',
         date: '2020.04.09 ~ 2020.05.08',
         client: 'LG Electronics',
@@ -169,7 +169,7 @@ var ary_expPrj = [
         // 31.포커스미디어코리아
         title: 'Focusmedia Korea official website',
         subtitle: 'Participated in Angular-based official website production',
-        date: '2020.4.16 ~ 2020.12.14',
+        date: '2020.04.16 ~ 2020.12.14',
         client: 'Focusmedia Korea',
         category: 'Award, Angular, HTML5, PHP, CSS3, Less, jQuery, Javascript, Canvas, GitLab, Slack, Zeplin',
         info: `
@@ -218,7 +218,7 @@ var ary_expPrj = [
         // 24.한국관광공사 글로벌 캠페인 사이트
         title: 'Korea Tourism Organization global campaign site',
         subtitle: 'Participated in Angular-based global campaign site creation',
-        date: '2019.7.23 ~ 2019.11.6',
+        date: '2019.07.23 ~ 2019.11.06',
         client: 'Korea Tourism Organization',
         category: 'Award, Angular, HTML5, CSS3, Less, jQuery, Javascript, GitLab, Slack, Zeplin',
         info: `
@@ -244,7 +244,7 @@ var ary_expPrj = [
         // 12.설화수 설린 디지털 팝업스토어
         title: 'Sulwhasoo Bloomstay digital pop-up store',
         subtitle: 'Participated in Angular-based new product experience microsite production',
-        date: '2018.12.4 ~ 2019.3.15',
+        date: '2018.12.04 ~ 2019.03.15',
         client: 'Sulwhasoo',
         category: 'Award, Angular, HTML5, CSS3, Less, jQuery, Javascript, GitLab',
         info: `
@@ -271,7 +271,7 @@ var ary_expPrj = [
         // 07.SBI 은행저축프로젝트
         title: 'SBI Saving Ginkgo project',
         subtitle: 'Create a campaign introduction micropage',
-        date: '2018.11.2 ~ 2018.11.26',
+        date: '2018.11.02 ~ 2018.11.26',
         client: 'SBI SAVINGS BANK',
         category: 'Award, HTML5, CSS3, jQuery, Javascript',
         info: `
@@ -296,7 +296,7 @@ var ary_expPrj = [
         // 01.뉴턴그룹 홈페이지
         title: 'Newturn Group official website',
         subtitle: 'Participation in and operation of official website renewal',
-        date: '2018.9.27 ~ 2021.12.30',
+        date: '2018.09.27 ~ 2021.12.30',
         client: 'newturn group',
         category: 'Award, HTML5, PHP, CSS3, jQuery, Javascript',
         info: `

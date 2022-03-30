@@ -111,7 +111,7 @@ var ary_expPrj = [
         // 48.일룸 플라세르 Showroom
         title: '일룸 플라세르 Showroom',
         subtitle: '제품 이미지를 강조한 트랜지션을 활용한 체험 마이크로사이트 제작',
-        date: '2020.9.10 ~ 2020.12.31',
+        date: '2020.09.10 ~ 2020.12.31',
         client: 'iloom',
 		category: 'Award, HTML5, PHP, CSS3, jQuery, JavaScript, Beusable',
         info: `
@@ -138,8 +138,8 @@ var ary_expPrj = [
         background: '#124b68'
 	},
 	{
-        // 39.LG LG VELVET 제품 상세페이지
-        title: 'LG LG VELVET 제품 상세페이지',
+        // 39.LG전자 신제품 VELVET 상세페이지 상세페이지
+        title: 'LG전자 신제품 VELVET 상세페이지 상세페이지',
         subtitle: '이미지 시퀀스와 스크롤 트랜지션을 활용한 신제품 상세페이지 제작',
         date: '2020.04.09 ~ 2020.05.08',
         client: 'LG전자',
@@ -169,7 +169,7 @@ var ary_expPrj = [
         // 31.포커스미디어코리아
         title: '포커스미디어코리아 공식 홈페이지',
         subtitle: 'Angular 기반 공식 홈페이지 리뉴얼 참여 및 운영',
-        date: '2020.4.16 ~ 2020.12.14',
+        date: '2020.04.16 ~ 2020.12.14',
         client: 'Focusmedia Korea',
         category: 'Award, Angular, HTML5, PHP, CSS3, Less, jQuery, Javascript, Canvas, GitLab, Slack, Zeplin',
         info: `
@@ -218,7 +218,7 @@ var ary_expPrj = [
         // 24.한국관광공사 글로벌 캠페인 사이트
         title: '한국관광공사 글로벌 캠페인 사이트',
         subtitle: 'Angular 기반의 글로벌 캠페인 사이트 제작 참여',
-        date: '2019.7.23 ~ 2019.11.6',
+        date: '2019.07.23 ~ 2019.11.06',
         client: 'Korea Tourism Organization',
         category: 'Award, Angular, HTML5, CSS3, Less, jQuery, Javascript, GitLab, Slack, Zeplin',
         info: `
@@ -244,7 +244,7 @@ var ary_expPrj = [
         // 12.설화수 설린 디지털 팝업스토어
         title: '설화수 설린 디지털 팝업스토어',
         subtitle: 'Angular 기반 신제품 체험 마이크로사이트 제작 참여',
-        date: '2018.12.4 ~ 2019.3.15',
+        date: '2018.12.04 ~ 2019.03.15',
         client: 'Sulwhasoo',
         category: 'Award, Angular, HTML5, CSS3, Less, jQuery, Javascript, GitLab',
         info: `
@@ -271,7 +271,7 @@ var ary_expPrj = [
         // 07.SBI 은행저축프로젝트
         title: 'SBI 은행저축프로젝트',
         subtitle: '캠페인 소개 마이크로페이지 제작',
-        date: '2018.11.2 ~ 2018.11.26',
+        date: '2018.11.02 ~ 2018.11.26',
         client: 'SBI저축은행',
         category: 'Award, HTML5, CSS3, jQuery, Javascript',
         info: `
@@ -296,7 +296,7 @@ var ary_expPrj = [
         // 01.뉴턴그룹 홈페이지
         title: '뉴턴그룹 공식 홈페이지',
         subtitle: '공식 홈페이지 리뉴얼 참여 및 운영',
-        date: '2018.9.27 ~ 2021.12.30',
+        date: '2018.09.27 ~ 2021.12.30',
         client: '뉴턴그룹',
         category: 'Award, HTML5, PHP, CSS3, jQuery, Javascript',
         info: `
