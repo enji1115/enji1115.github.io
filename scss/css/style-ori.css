@@ -1,0 +1,12 @@
+﻿@charset "utf-8";
+
+html, body {width:100%; position:relative;}
+.el_hid {display:block; width:1px; height:1px; position:absolute; left: -9999px; top: -9999px; color:transparent; overflow:hidden;}
+.img_base {display:block; width:100%; position:relative;}
+.img_cv {display:block; width:100%; position:absolute; left:0; top:0;}
+
+.box {position:relative; left:0; top:0;}
+	.box.fixed {position:fixed;}
+	.box.ended {position:absolute; top:auto; bottom:0;}
+
+.wrap {width:100%; max-width:1200px; margin:0 auto;}

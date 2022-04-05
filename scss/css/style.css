@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/* s: common */
+html, body {
+  width: 100%;
+  position: relative;
+}
+
+body {
+  color: #fff;
+}
+
+.el_hid {
+  display: block;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  color: transparent;
+  overflow: hidden;
+}
+
+.img_base {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+.img_cv {
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.box {
+  position: relative;
+  left: 0;
+  top: 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+.box .fixed {
+  position: fixed;
+}
+.box .ended {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+}
+
+input::placeholder {
+  color: #777;
+}
+
+button {
+  color: #fff;
+}
+
+/* e: common */
+/* wrap */
+.wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* s: 반응형 */
+/* 데스크탑 */
+@media (min-width: 1800px) {
+  .visual {
+    background-color: #fff;
+  }
+}
+/* 노트북에서 데스크탑 */
+@media (min-width: 1500px) and (max-width: 1799px) {
+  .visual {
+    background-color: #eee;
+  }
+}
+/* 노트북 */
+@media (min-width: 1024px) and (max-width: 1499px) {
+  .visual {
+    background-color: #ddd;
+  }
+}
+/* 태블릿에서 노트북 */
+@media (min-width: 960px) and (max-width: 1023px) {
+  .visual {
+    background-color: #ccc;
+  }
+}
+/* 태블릿 */
+@media (min-width: 720px) and (max-width: 959px) {
+  .visual {
+    background-color: #bbb;
+  }
+}
+/* 모바일에서 태블릿 */
+@media (min-width: 535px) and (max-width: 719px) {
+  .visual {
+    background-color: #aaa;
+  }
+}
+/* 모바일 */
+@media (min-width: 335px) and (max-width: 534px) {
+  .visual {
+    background-color: #999;
+  }
+}
+/* e: 반응형 */
+
+/*# sourceMappingURL=style.css.map */

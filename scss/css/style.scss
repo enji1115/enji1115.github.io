@@ -1,0 +1,123 @@
+@charset "UTF-8";
+@import "./mixin";
+
+// placeholer 
+$text_color : #777;
+
+// mixin
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+// local Variables
+$btn-color : #fff;
+
+// Global Variables
+$G-body-color : #fff;
+
+/* s: common */
+html, body {
+    width:100%; position:relative;
+}
+body {
+    color: $G-body-color;
+}
+.el_hid {
+    display:block; width:1px; height:1px;
+    position:absolute; left: -9999px; top: -9999px;
+    color:transparent; overflow:hidden;
+}
+.img {
+    &_base {
+        display:block; width:100%; position:relative;
+    }
+    &_cv {
+        display:block; width:100%; position:absolute; left:0; top:0;
+    }
+}
+.box {
+    position:relative; left:0; top:0;
+    @include border-radius(10px);
+
+	.fixed {position:fixed;}
+	.ended {position:absolute; top:auto; bottom:0;}
+}
+input::placeholder {
+    color: $text_color;
+}
+button {
+    color: $btn-color;
+}
+/* e: common */
+
+
+/* wrap */
+.wrap {width:100%; max-width:1200px; margin:0 auto;}
+
+/* s: 반응형 */
+/* 데스크탑 */
+@include desktop {
+    .visual {
+        background-color: #fff;
+    }
+    .section {}
+    .footer {}
+}
+
+/* 노트북에서 데스크탑 */
+@include desktopToLaptop {
+    .visual {
+        background-color: #eee;
+    }
+    .section {}
+    .footer {}
+}
+
+/* 노트북 */
+@include laptop {
+    .visual {
+        background-color: #ddd;
+    }
+    .section {}
+    .footer {}
+}
+
+/* 태블릿에서 노트북 */
+@include laptopToTablet {
+    .visual {
+        background-color: #ccc;
+    }
+    .section {}
+    .footer {}
+}
+
+/* 태블릿 */
+@include tablet {
+    .visual {
+        background-color: #bbb;
+    }
+    .section {}
+    .footer {}
+}
+
+/* 모바일에서 태블릿 */
+@include tabletToMobile {
+    .visual {
+        background-color: #aaa;
+    }
+    .section {}
+    .footer {}
+}
+
+/* 모바일 */
+@include mobile {
+    .visual {
+        background-color: #999;
+    }
+    .section {}
+    .footer {}
+}
+/* e: 반응형 */
