@@ -37,8 +37,10 @@
   }
 }
 
-.title {
-  margin: 20px;
-  color: #00a2ff;
+.tit {
+  margin-left: 30px;
   font-weight: 600;
+}
+.txt {
+  margin-left: 30px;
 }
