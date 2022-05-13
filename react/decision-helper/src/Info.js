@@ -1,5 +1,8 @@
 // src/Info.js
 
+// CSS 불러오기
+import './Scss.scss';
+
 // CSS 모듈 불러오기
 import styles from './Info.module.css';
 
