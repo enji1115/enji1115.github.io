@@ -1,36 +1,21 @@
 // src/App.js
-import React, { useState } from 'react';
-import styles from './App.module.css';
-import Layout from './components/shared/Layout';
+import { Route, Routes } from 'react-router-dom';
+// Routes 컴포넌트는 Route 컴포넌트를 묶어주는 컴포넌트
+// Route 컴포넌트는 링크를 생성하는 컴포넌트
+//  ㄴ> 주솟값이 변경되었을 때, 작성한 Route 컴포넌트 중 주솟값과 path 속성이 겹치는 컴포넌트를 렌더링
+import Home from './pages/Home';
+import Explore from './pages/Explore';
+import Subscription from './pages/Subscription';
+import Assignment from './pages/Assignment';
 
 function App() {
-  const [toggle, setTog] = useState(true);
-  function onClick() {
-    setTog(!toggle);
-  }
-
-  const [color, setColor] = useState('blue');
-  function onClickColor() {
-    if (color === 'blue') setColor('red');
-    else setColor('blue');
-  }
-
-  
   return (
-    <Layout>
-      <div>콘텐츠!</div>
-      {true && <div>True일 때 출력되는 메세지</div>}
-      {false && <div>False일 때 출력되는 메세지</div>}
-
-      <button onClick={onClick}>tog</button>
-      {toggle===true && <div>True일 때 출력되는 메세지</div>}
-      {toggle===false && <div>False일 때 출력되는 메세지</div>}
-
-      <button onClick={onClickColor}>toggle color</button>
-      {/* 그냥 App.css 사용시 */}
-      {/* <div className={color === 'blue' ? "blue" : "red"}>{(color === 'blue') ? 'True임' : 'False임'}</div> */}
-      <div className={styles.box +' '+ (color === 'blue' ? styles.blue : styles.red)}>{(color === 'blue') ? 'True임' : 'False임'}</div>
-    </Layout>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/explore" element={<Explore />} />
+      <Route path="/subscription" element={<Subscription />} />
+      <Route path="/assignment" element={<Assignment />} />
+    </Routes>
   );
 }
 
