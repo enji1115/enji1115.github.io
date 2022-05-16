@@ -15,6 +15,7 @@
 .layout {
     display: flex;
     flex: 1;
+    margin-top: 56px;
 }
 .contents {
     flex: 1;
