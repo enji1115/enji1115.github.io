@@ -1,3 +1,7 @@
-.box {width: 100px; height: 100px;}
-.blue {background-color: blue;}
-.red {background-color: red;}
+.menuOff .menu {
+    display: none;
+}
+.menuOff .contents {
+    margin-left: 12px;
+    transition: margin-left 0.5s;
+}

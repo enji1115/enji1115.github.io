@@ -44,3 +44,10 @@
     background-color: #f8f8f8;
     cursor: pointer;
 }
+
+.btn_ham {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background: transparent;
+}
