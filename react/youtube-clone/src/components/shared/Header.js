@@ -20,6 +20,15 @@ function Header() {
         }
     }
 
+    const [srcVal, setSrcVal] = useState('');
+    function onClickSrc() {
+        console.log(srcVal);
+        setSrcVal('');
+    }
+    function onChangeSrc(event) {
+        setSrcVal(event.target.value);
+    }
+
     return (
         <div className={styles.header}>
             <div className={styles.tab}>
@@ -29,8 +38,8 @@ function Header() {
                 <img src={youtube_logo} alt="로고" className={styles.logo} />
             </div>
             <div className={styles['center-tab']}>
-                <input className={styles.input} />
-                <IoSearchOutline className={styles['search-icon']} />
+                <input onChange={onChangeSrc} value={srcVal} className={styles.input} />
+                <IoSearchOutline onClick={onClickSrc} className={styles['search-icon']} />
             </div>
             <div className={styles.tab}>
                 <BsGrid3X3Gap className={styles.icon} />
