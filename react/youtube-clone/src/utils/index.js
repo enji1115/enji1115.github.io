@@ -1,4 +1,7 @@
 //src/utils/index.js
+import moment from 'moment';
+import 'moment/locale/ko';
+
 function ProcessViewCount(viewCount) {
     // toFixed함수는 인자로 받은 정수값 아래에서 반올림
     if (viewCount < 1000) {
@@ -14,4 +17,8 @@ function ProcessViewCount(viewCount) {
     }
 }
 
-export { ProcessViewCount };
+function ProcessUploadDate(uploadDate) {
+    return moment(uploadDate).fromNow();
+}
+
+export { ProcessViewCount, ProcessUploadDate };

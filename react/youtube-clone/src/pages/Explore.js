@@ -2,7 +2,7 @@
 import Layout from '../components/shared/Layout';
 import ContentsLayout from '../components/shared/ContentsLayout';
 import youtubeData from '../data/youtubeData.json';
-import ExploreCard from '../components/explore/ExploreCard';
+import HorizontalCard from '../components/shared/HorizontalCard';
 
 function Explore() {
     // function mapFuncion(data, index) {
@@ -13,7 +13,7 @@ function Explore() {
     //     );
     // }
 
-    // function ExploreCard(data, index) {
+    // function HorizontalCard(data, index) {
     //     return (
     //         <div key={`explore-card-${index}`}>
     //             {/* key 속성은 리턴되는 JSX의 최상단 태그에 부여 */}
@@ -37,10 +37,10 @@ function Explore() {
                 {mapFuncion('클론코딩', 3)}
                 <br/> */}
 
-                {/* {youtubeData['data'].map(ExploreCard)} */}
+                {/* {youtubeData['data'].map(HorizontalCard)} */}
                 
                 {youtubeData['data'].map(function (data, index) {
-                    return <ExploreCard key={`explore-card-${index}`} data={data} />;
+                    return <HorizontalCard key={`explore-card-${index}`} data={data} />;
                 })}
             </ContentsLayout>
         </Layout>
