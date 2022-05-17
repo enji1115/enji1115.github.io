@@ -21,3 +21,9 @@
     flex: 1;
     margin-left: 240px;
 }
+
+@media screen and (max-width: 911px) {
+    .contents {
+        margin-left: 72px;
+    }
+}

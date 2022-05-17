@@ -2,6 +2,6 @@
     display: none;
 }
 .menuOff .contents {
-    margin-left: 12px;
+    margin-left: 0px;
     transition: margin-left 0.5s;
 }
